@@ -3,27 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a2b43ee6-714e-467d-92ed-6a638fa8302a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_2b02fb9f26a388898cdacd74ed52d897.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_3933885915472dea544c74baa4c1e351.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_6662946e056ce18b4b81365a58a0ca65.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_68769e4a06f0185db8e2c5ac2af285f3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_89d2d4a8cf9509236d020a6ce6246274.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_9ffc50dd20f69b6114a468d6e155432c.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_a2550a2df103a162f655a029b5362a7e.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_a41afa55bef4000bb7927a6d605f11fa.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_a46717307af55df550a325934f303947.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/log/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_fd999ee440cb79f8f6aa99c3c96a844e.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_fdd9edf3569a4ae039fc7fe82a1ffc43.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/0c92bd656a9540509f2b915c61f08b1e.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/783a33fe45b34a78baab35a6cc629856.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/cd5399ee441f43f6af225bb4658e6aa3.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/d9fe25adb5474215875ca9b7acc895ac.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/progress/apks_processed_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/progress/errors_0.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mudflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/mudflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16_results.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_experiment.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -142,7 +123,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -7,25 +7,10 @@ from pandas.errors import EmptyDataError
 from Utilities import add_to_error_list
 from flowdroid import run_flowdroid
 from multiprocessing import Process
-from mudflow import add_data_to_mudflow_file, create_source_sink_map
+from mudflow import add_data_to_mudflow_file
 import pandas as pd
 
-"""
-Get list of apks for:
-General benign
-Malware
-GP
-- only include if not duplicated
-arranged by name
 
-1  csv for each process
-
-For each process:
-    give csv
-    create file for outp
-
-"""
-# TODO: Ask what to do with 0 flows
 #TODO: change directories
 apk_files_dir = '/Users/angeli/My_Documents/Mudflow/DataTest/'
 apk_list_csv_dir = '/Users/angeli/My_Documents/Mudflow/'
@@ -81,9 +66,9 @@ def is_processed(pid, apk):
         for row in reader:
             for i in range(len(row)):
                 if os.path.splitext(os.path.basename(apk))[0] in row[i]:
-                    print('already processed: ' + apk)
+                    print('Already processed: ' + apk)
                     return True
-        print('processing: ' + apk)
+        print('Processing: ' + apk)
         return False
 
 
@@ -99,6 +84,7 @@ def add_to_processed_apks_list(apk, id):
 def update_apks_processed(num_workers):
     apks_processed_files = [i for i in glob.glob('data/progress/apks_processed_*.csv')]
     if apks_processed_files:
+        print('Combining processed apks list')
         try:
             result = pd.concat([pd.read_csv(f) for f in apks_processed_files])
             combined_csv = pd.DataFrame(result).drop_duplicates(keep='last')
@@ -108,26 +94,29 @@ def update_apks_processed(num_workers):
             df = pd.DataFrame()
 
 
+#   Return False if flowdroid output contains 'No sources found', 'No sinks found', or 'No results found', True
+#   otherwise
 def has_flow(apk):
     output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
     with open(output_path, 'r') as file:
         contents = file.read()
         if 'No sources found' in contents or 'No sinks found' in contents or 'No results found' in contents:
-            print('no sources or sinks found')
-            return True
-    return False
+            print('No sources or sinks found for ' + apk)
+            return False
+    return True
 
 
 def contains_error(apk, pid):
     output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
-    if os.path.exists(output_path):
-        with open(output_path, 'r') as file:
-            contents = file.read()
-            if 'Exception in thread ' in contents:
-                add_to_error_list(apk, pid, 'flowdroid', 'Flowdroid Runtime Error')
-        return True
-    else:
+    if not os.path.exists(output_path):
         add_to_error_list(apk, pid, 'flowdroid', 'flowdroid text file output does not exist: ' + output_path)
+        return True
+    with open(output_path, 'r') as file:
+        contents = file.read()
+        if 'Exception in thread ' in contents:
+            add_to_error_list(apk, pid, 'flowdroid', 'Flowdroid Runtime Error')
+            return True
+        return False
 
 
 def start_experiment(apks_list_path):
@@ -138,8 +127,8 @@ def start_experiment(apks_list_path):
         for apks in apks_list:
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
-                    #run_flowdroid(apks[i])
-                    if not contains_error(apks[i], pid):
+                    # run_flowdroid(apks[i])
+                    if contains_error(apks[i], pid):
                         add_to_processed_apks_list(apks[i], pid)
                         continue
                     contain_flow = has_flow(apks[i])
@@ -147,7 +136,7 @@ def start_experiment(apks_list_path):
                         pass
                         # add_data_to_susi_file(apks[i])
                     add_data_to_mudflow_file(apks[i], pid, contain_flow)
-                    add_to_processed_apks_list(apks[i], pid)
+                    #add_to_processed_apks_list(apks[i], pid)
 
 
 def main():
