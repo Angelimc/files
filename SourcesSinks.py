@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import re
+from Utilities import copyToFile, appendToFile
 
 apkPath = '/Users/angeli/My_Documents/Mudflow/apks'
 # Excludes NO_SENSITIVE_SOURCE, which has a different implementation for creating files
@@ -8,21 +9,6 @@ sourceCategories = ['HARDWARE_INFO', 'UNIQUE_IDENTIFIER', 'LOCATION_INFORMATION'
                     'ACCOUNT_INFORMATION', 'EMAIL', 'FILE_INFORMATION', 'BLUETOOTH_INFORMATION', 'VOIP',
                     'DATABASE_INFORMATION', 'PHONE_INFORMATION', 'AUDIO', 'SMS_MMS', 'CONTACT_INFORMATION',
                     'CONTENT_RESOLVER', 'CALENDAR_INFORMATION', 'SYSTEM_SETTINGS', 'IMAGE', 'BROWSER_INFORMATION', 'NFC']
-
-
-def copyToFile(input, output):
-    with open(input) as f1:
-        with open(output, 'w') as f2:
-            for line in f1:
-                f2.write(line)
-            f2.write('\n')
-
-
-def appendToFile(input, output):
-    with open(input) as f1:
-        with open(output, 'a+') as f2:
-            for line in f1:
-                f2.write(line)
 
 
 def createSourceSinkForCategory(category):

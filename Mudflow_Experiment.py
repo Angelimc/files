@@ -5,7 +5,7 @@ import concurrent.futures
 
 from ExcelHelper import append_df_to_excel
 from SourcesSinks import appendToFile, copyToFile
-from Flowdroid import runMudflowFlowdroid
+from Flowdroid import runFlowdroid
 from Flowdroid20 import runFlowdroid20
 from Flowdroid import runflowdroid
 import glob
@@ -64,7 +64,7 @@ def createMudflowFile():
                 addSource(result[0])
                 addSink(result[1])
                 # add number of leaks to row
-                numLeaks = runMudflowFlowdroid(apk, sourceSinkPath, None, result[0] + result[1])
+                numLeaks = runFlowdroid(apk, sourceSinkPath, None, result[0] + result[1])
                 data.append(numLeaks)
                 print(cols[i] + ': ' + str(numLeaks))
             else:

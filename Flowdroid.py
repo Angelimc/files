@@ -8,7 +8,7 @@ from SourcesSinks import copyToFile
 androidJar = '/Users/angeli/Library/Android/sdk/platforms'
 flowdroidJar = 'flowdroidJars/flowdroid.jar'
 
-def runMudflowFlowdroid(apkPath, sourcesSinks, customConfig, name):
+def runFlowdroid(apkPath, sourcesSinks, customConfig, name):
     print(os.path.basename(apkPath))
     print(os.path.basename(sourcesSinks))
     # 'SourcesAndSinks.txt' must be in root directory for this version
