@@ -1,7 +1,9 @@
 import csv
 import glob
+import os
 import sys
 from Main import create_mudflow_file
+from multiprocessing import Process
 
 """
 Get list of apks for:
@@ -49,15 +51,23 @@ def create_apks_chunks(num_workers):
     for i in range(3):
         create_csv(general_malware_chunks[i], general_benign_chunks[i], gp_malware_chunks[i], i)
 
+def start_experiments(apks):
+    #create_susi_categories_file(apk_list_csv_dir + 'apks_chunk_' + str(i) + '.csv')
+    create_mudflow_file(apks)
+
 
 def main():
-    #num_workers = 3
-    num_workers = int(sys.argv[1])
-
+    num_workers = 3
+    #num_workers = int(sys.argv[1])
     create_apks_chunks(num_workers)
-
-    create_susi_categories_file(apk_list_csv_dir + 'apks_chunk_0')
-    create_mudflow_file(apk_list_csv_dir + 'apks_chunk_0')
+    procs = []
+    for i in range(num_workers):
+        apk_list_csv_path = apk_list_csv_dir + 'apks_chunk_' + str(i) + '.csv'
+        p = Process(target=start_experiments, args=[apk_list_csv_path])
+        procs.append(p)
+        p.start()
+    for p in procs:
+        p.join
 
 
 
