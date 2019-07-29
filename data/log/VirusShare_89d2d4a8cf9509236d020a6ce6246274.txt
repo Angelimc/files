@@ -1,5 +1,5 @@
 [main] INFO soot.jimple.infoflow.taintWrappers.EasyTaintWrapper - Loaded wrapper entries for 70 classes and 11 exclusions.
-[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.009486042 seconds
+[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.022175079 seconds
 Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
 Warning: java.lang.ref.Finalizer is a phantom class!
 [main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
@@ -339,9 +339,9 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [Spark] Pointer Graph simplified in 0.0 seconds.
 [Spark] Propagation in 0.0 seconds.
 [Spark] Solution found in 0.0 seconds.
-[main] INFO soot.jimple.infoflow.Infoflow - Callgraph construction took 0.110532913 seconds
+[main] INFO soot.jimple.infoflow.Infoflow - Callgraph construction took 0.114472292 seconds
 [main] INFO soot.jimple.infoflow.codeOptimization.InterproceduralConstantValuePropagator - Removing side-effect free methods is disabled
-[main] INFO soot.jimple.infoflow.Infoflow - Dead code elimination took 0.020307012 seconds
+[main] INFO soot.jimple.infoflow.Infoflow - Dead code elimination took 0.026717754 seconds
 [main] INFO soot.jimple.infoflow.Infoflow - Callgraph has 120 edges
 [main] INFO soot.jimple.infoflow.Infoflow - Starting Taint Analysis
 [main] INFO soot.jimple.infoflow.data.FlowDroidMemoryManager - Initializing FlowDroid memory manager...
@@ -375,16 +375,13 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 13 with task id 12
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 14 with task id 13
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 15 with task id 14
-[main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Path processing took 0.003546674 seconds in total
+[main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Path processing took 0.009826093 seconds in total
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r7 = virtualinvoke $r6.<android.os.Bundle: java.lang.Object get(java.lang.String)>("pdus") in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $r7 = virtualinvoke $r6.<android.os.Bundle: java.lang.Object get(java.lang.String)>("pdus") in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r6 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $z0 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("set admin") in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r6.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r1, $r4, $r5) in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0) in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)>
 [main] INFO soot.jimple.infoflow.Infoflow - - $r4 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0) in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)>
@@ -393,11 +390,14 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [main] INFO soot.jimple.infoflow.Infoflow - - $r6 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>() in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $r11 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getOriginatingAddress()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $r2 = virtualinvoke $r0.<com.security.service.MainActivity: android.view.MenuInflater getMenuInflater()>() in method <com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
@@ -406,17 +406,17 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 <android.os.Bundle: java.lang.Object get(java.lang.String)> -> <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>
 <android.content.Intent: android.os.Bundle getExtras()> -> <android.os.Bundle: java.lang.Object get(java.lang.String)>
 <android.telephony.SmsMessage: java.lang.String getMessageBody()> -> <java.lang.String: boolean startsWith(java.lang.String)>
-<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void setContentView(int)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void setContentView(int)>
 <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
 <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
 <android.telephony.SmsMessage: java.lang.String getOriginatingAddress()> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
 <android.telephony.SmsMessage: java.lang.String getMessageBody()> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
 <android.telephony.SmsManager: android.telephony.SmsManager getDefault()> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
 <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> <android.telephony.SmsMessage: java.lang.String getOriginatingAddress()>
-<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> <android.telephony.SmsMessage: java.lang.String getMessageBody()>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void setContentView(int)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void setContentView(int)>
 <android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.view.MenuInflater getMenuInflater()>
 <android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.view.MenuInflater getMenuInflater()>
+<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> <android.telephony.SmsMessage: java.lang.String getMessageBody()>
 <android.app.Activity: void setContentView(int)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
 <android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
 <android.telephony.SmsMessage: java.lang.String getMessageBody()> -> <java.lang.String: java.lang.String substring(int,int)>
@@ -444,8 +444,8 @@ NO_SENSITIVE_SOURCE -> <android.util.Log: int e(java.lang.String,java.lang.Strin
 NO_SENSITIVE_SOURCE -> <android.app.AlertDialog$Builder: android.app.AlertDialog show()>
 NO_SENSITIVE_SOURCE -> <android.content.Intent: java.lang.String getAction()>
 Found 40 results
-Maximum memory consumption: 241.060744 MB
-Analysis has run for 9.606620252 seconds
+Maximum memory consumption: 228.192752 MB
+Analysis has run for 8.738148612 seconds
 Collected sources:
 	$r5 = virtualinvoke $r4.<java.lang.Class: java.lang.String getCanonicalName()>()
 	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()

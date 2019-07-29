@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 from pandas import DataFrame
 
@@ -84,5 +86,5 @@ def appendToFile(input, output):
 
 
 def add_to_error_list(apk, pid, step, message):
-    df = DataFrame([apk, step, message]).T
+    df = DataFrame([os.path.splitext(os.path.basename(apk))[0], step, message]).T
     append_df_to_excel('data/progress/errors_' + pid + '.xlsx', df, header=None)

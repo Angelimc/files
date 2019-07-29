@@ -7,7 +7,7 @@ from pandas.errors import EmptyDataError
 from Utilities import add_to_error_list
 from flowdroid import run_flowdroid
 from multiprocessing import Process
-from mudflow import add_data_to_mudflow_file, parse_result
+from mudflow import add_data_to_mudflow_file, parse_result, create_source_sink_map
 import pandas as pd
 
 """
@@ -96,14 +96,14 @@ def add_to_processed_apks_list(apk, id):
         writer.writerow([apk])
 
 
-def update_apks_processed():
+def update_apks_processed(num_workers):
     apks_processed_files = [i for i in glob.glob('data/progress/apks_processed_*.csv')]
     if apks_processed_files:
         try:
             result = pd.concat([pd.read_csv(f) for f in apks_processed_files])
             combined_csv = pd.DataFrame(result).drop_duplicates(keep='last')
-            for apks_processed_file in apks_processed_files:
-                combined_csv.to_csv(apks_processed_file, index=False, encoding='utf-8-sig')
+            for pid in range(num_workers):
+                combined_csv.to_csv('data/progress/apks_processed_' + str(pid) + '.csv', index=False, encoding='utf-8-sig')
         except EmptyDataError:
             df = pd.DataFrame()
 
@@ -135,22 +135,25 @@ def start_experiment(apks_list_path):
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
                     print(apks[i])
-                    #run_flowdroid(apks[i])
-                    if not output_file_exists(apks[i]):
+                    run_flowdroid(apks[i])
+                    if not output_file_exists(apks[i], pid):
+                        add_to_processed_apks_list(apks[i], pid)
                         continue
                     contain_flow = has_flow(apks[i])
                     if contain_flow:
                         pass
                         # add_data_to_susi_file(apks[i])
-                    add_data_to_mudflow_file(apks[i], pid, contain_flow)
+                    #add_data_to_mudflow_file(apks[i], pid, contain_flow)
                     add_to_processed_apks_list(apks[i], pid)
 
 
 def main():
+    create_source_sink_map('VirusShare_89d2d4a8cf9509236d020a6ce6246274')
+    """
     num_workers = 1
     #num_workers = int(sys.argv[1])
     create_apks_chunks(num_workers)
-    update_apks_processed()
+    update_apks_processed(num_workers)
 
     procs = []
     for i in range(num_workers):
@@ -160,7 +163,7 @@ def main():
         p.start()
     for p in procs:
         p.join()
-
+"""
 
 if __name__ =='__main__':
     main()
