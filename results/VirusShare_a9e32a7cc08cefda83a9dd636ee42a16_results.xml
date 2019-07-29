@@ -1,6 +1,61 @@
 <list>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
@@ -35,6 +90,17 @@
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
       <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putBoolean(java.lang.String,boolean)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
@@ -67,120 +133,6 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putBoolean(java.lang.String,boolean)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink class="st.cs.uni.saarland.de.IntentInfo">
-      <method>&lt;android.app.Activity: void startActivity(android.content.Intent)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startInfoActivity(int)&gt;</callerMethod>
-      <className>com.elbirras.wificharger.TopicActivity</className>
-      <extras/>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink class="st.cs.uni.saarland.de.IntentInfo">
-      <method>&lt;android.app.Activity: void startActivity(android.content.Intent)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startInfoActivity(int)&gt;</callerMethod>
-      <className>com.elbirras.wificharger.TopicActivity</className>
-      <extras/>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
       <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
@@ -203,78 +155,12 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: void putBoolean(java.lang.String,boolean)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+      <method>&lt;android.os.Bundle: long getLong(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -302,6 +188,43 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
+      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink class="st.cs.uni.saarland.de.IntentInfo">
+      <method>&lt;android.app.Activity: void startActivity(android.content.Intent)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startInfoActivity(int)&gt;</callerMethod>
+      <className>com.elbirras.wificharger.TopicActivity</className>
+      <extras/>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink class="st.cs.uni.saarland.de.IntentInfo">
+      <method>&lt;android.app.Activity: void startActivity(android.content.Intent)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startInfoActivity(int)&gt;</callerMethod>
+      <className>com.elbirras.wificharger.TopicActivity</className>
+      <extras/>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
     </source>
@@ -313,67 +236,12 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -383,62 +251,29 @@
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
       <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </sink>
     <path/>
@@ -449,8 +284,41 @@
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -471,7 +339,7 @@
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.os.Bundle: long getLong(java.lang.String)&gt;</method>
+      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
     </sink>
     <path/>
@@ -533,380 +401,6 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: android.view.Window getWindow()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: android.view.Window getWindow()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putBoolean(java.lang.String,boolean)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Bitmap: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Bitmap: int getHeight()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
       <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
@@ -951,6 +445,17 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
+      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
@@ -973,23 +478,12 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: android.content.Intent getIntent()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.content.Intent: int getIntExtra(java.lang.String,int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1006,11 +500,77 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: android.view.Window getWindow()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: android.view.Window getWindow()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </sink>
     <path/>
@@ -1021,8 +581,19 @@
       <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1050,6 +621,61 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.os.Bundle: void putBoolean(java.lang.String,boolean)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
@@ -1083,7 +709,7 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
@@ -1116,100 +742,122 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1248,7 +896,7 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
@@ -1281,30 +929,349 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
+      <method>&lt;android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Paint: void setStyle(android.graphics.Paint$Style)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Bitmap: int getWidth()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Bitmap: int getHeight()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Matrix: void setScale(float,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: android.content.Intent getIntent()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.Intent: int getIntExtra(java.lang.String,int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.app.Activity: android.view.Window getWindow()&gt;</method>
+      <method>&lt;android.os.Bundle: void putBoolean(java.lang.String,boolean)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
     <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: java.lang.Object getSystemService(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.widget.ImageView: void setVisibility(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void resetControls()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putBoolean(java.lang.String,boolean)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: void putLong(java.lang.String,long)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: void putFloat(java.lang.String,float)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
       <method>&lt;android.view.View: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onDraw(android.graphics.Canvas)&gt;</callerMethod>
     </source>
     <sink>
       <method>NO_SENSITIVE_SINK</method>
@@ -1314,7 +1281,7 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.content.res.Resources: java.lang.String getString(int)&gt;</method>
+      <method>&lt;android.app.Activity: android.view.Window getWindow()&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
     <sink>
@@ -1336,6 +1303,61 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
+      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.view.View: int getWidth()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Bitmap: int getHeight()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.content.res.Resources: java.lang.String getString(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.net.wifi.WifiManager: int getWifiState()&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startScan()&gt;</callerMethod>
     </source>
@@ -1369,52 +1391,19 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;java.lang.Class: java.lang.String getSimpleName()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void &lt;clinit&gt;()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.view.View: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onDraw(android.graphics.Canvas)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
       <method>&lt;android.view.View$MeasureSpec: int getSize(int)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.graphics.Bitmap: int getWidth()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
     </source>
     <sink>
       <method>NO_SENSITIVE_SINK</method>
@@ -1426,28 +1415,6 @@
     <source>
       <method>&lt;android.view.View: android.content.Context getContext()&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.view.View$MeasureSpec: int getSize(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
     </source>
     <sink>
       <method>NO_SENSITIVE_SINK</method>
@@ -1490,6 +1457,39 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
+      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.view.View$MeasureSpec: int getSize(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
       <method>&lt;android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
@@ -1501,8 +1501,8 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.os.Bundle: float getFloat(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
+      <method>&lt;java.lang.Class: java.lang.String getSimpleName()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void &lt;clinit&gt;()&gt;</callerMethod>
     </source>
     <sink>
       <method>NO_SENSITIVE_SINK</method>
@@ -1514,28 +1514,6 @@
     <source>
       <method>&lt;android.os.Bundle: long getLong(java.lang.String)&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Bitmap: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>NO_SENSITIVE_SINK</method>
-      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.graphics.Bitmap: int getHeight()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
     </source>
     <sink>
       <method>NO_SENSITIVE_SINK</method>
@@ -1560,8 +1538,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()&gt;</method>
-      <callerMethod>&lt;com.parand.a.e: java.lang.Integer a(com.parand.a.c)&gt;</callerMethod>
+      <method>&lt;android.util.Log: int d(java.lang.String,java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1571,8 +1549,19 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
+      <method>&lt;android.view.View: int getWidth()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onDraw(android.graphics.Canvas)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()&gt;</method>
+      <callerMethod>&lt;com.parand.a.e: java.lang.Integer a(com.parand.a.c)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1593,8 +1582,41 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.view.View: int getWidth()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
       <method>&lt;java.io.Writer: void write(java.lang.String)&gt;</method>
       <callerMethod>&lt;com.parand.b.d.a: void d(java.lang.String)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.view.View: int getHeight()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1670,63 +1692,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;java.io.Writer: void write(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.parand.b.d.a: void k()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
       <method>&lt;android.util.Log: int d(java.lang.String,java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.util.Log: int d(java.lang.String,java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;java.lang.Class: java.lang.String getSimpleName()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void &lt;clinit&gt;()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;java.io.Writer: void write(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.parand.b.d.a: com.parand.b.d.a a(int,java.lang.String)&gt;</callerMethod>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onSizeChanged(int,int,int,int)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1747,8 +1714,30 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.view.View$MeasureSpec: int getSize(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
+      <method>&lt;java.io.Writer: void write(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.parand.b.d.a: void k()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;java.io.Writer: void write(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.parand.b.d.a: com.parand.b.d.a a(int,java.lang.String)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.graphics.Bitmap: int getWidth()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1791,19 +1780,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
+      <method>&lt;android.util.Log: int d(java.lang.String,java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1846,6 +1824,17 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
       <method>&lt;android.graphics.Bitmap: int getWidth()&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
     </sink>
@@ -1879,8 +1868,30 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.view.View$MeasureSpec: int getSize(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
       <method>&lt;android.telephony.SmsManager: android.telephony.SmsManager getDefault()&gt;</method>
       <callerMethod>&lt;com.parand.balesen.g: void run()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;java.lang.String: byte[] getBytes(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1923,17 +1934,6 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.util.Log: int d(java.lang.String,java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onSizeChanged(int,int,int,int)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
       <method>&lt;android.app.AlarmManager: void set(int,long,android.app.PendingIntent)&gt;</method>
       <callerMethod>&lt;com.parand.balesen.VoateService: void a(long)&gt;</callerMethod>
     </sink>
@@ -1945,8 +1945,19 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.view.View: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
+      <method>&lt;android.content.ComponentName: java.lang.String getClassName()&gt;</method>
+      <callerMethod>&lt;com.parand.a.g: boolean a(android.content.Context,java.util.List)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;java.lang.Class: java.lang.String getSimpleName()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void &lt;clinit&gt;()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -1967,8 +1978,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.graphics.Bitmap: int getHeight()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
+      <method>&lt;android.content.Intent: android.content.Intent putExtra(java.lang.String,int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startInfoActivity(int)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2000,8 +2011,19 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.view.View: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
+      <method>&lt;android.telephony.TelephonyManager: java.lang.String getLine1Number()&gt;</method>
+      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsManager: android.telephony.SmsManager getDefault()&gt;</method>
+      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2022,6 +2044,28 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.graphics.Bitmap: int getHeight()&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
       <method>&lt;java.net.HttpURLConnection: int getResponseCode()&gt;</method>
       <callerMethod>&lt;com.parand.a.g: java.lang.String a(java.lang.String,java.lang.String)&gt;</callerMethod>
     </sink>
@@ -2033,8 +2077,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.content.Intent: android.content.Intent putExtra(java.lang.String,int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.MainActivity: void startInfoActivity(int)&gt;</callerMethod>
+      <method>&lt;android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)&gt;</method>
+      <callerMethod>&lt;com.parand.balesen.b: void run()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2044,8 +2088,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.b: void run()&gt;</callerMethod>
+      <method>&lt;android.view.View$MeasureSpec: int getSize(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2077,17 +2121,6 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.app.ActivityManager: java.util.List getRunningServices(int)&gt;</method>
-      <callerMethod>&lt;com.parand.a.g: boolean a(android.content.Context,java.util.List)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
       <method>&lt;android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()&gt;</method>
       <callerMethod>&lt;com.parand.balesen.VoateService: boolean b()&gt;</callerMethod>
     </sink>
@@ -2100,7 +2133,7 @@
     </source>
     <sink>
       <method>&lt;android.telephony.TelephonyManager: java.lang.String getSubscriberId()&gt;</method>
-      <callerMethod>&lt;com.parand.a.g: java.lang.String a(android.content.Context)&gt;</callerMethod>
+      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2110,8 +2143,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.content.ComponentName: java.lang.String getClassName()&gt;</method>
-      <callerMethod>&lt;com.parand.a.g: boolean a(android.content.Context,java.util.List)&gt;</callerMethod>
+      <method>&lt;android.telephony.TelephonyManager: java.lang.String getSubscriberId()&gt;</method>
+      <callerMethod>&lt;com.parand.a.g: java.lang.String a(android.content.Context)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2144,7 +2177,7 @@
     </source>
     <sink>
       <method>&lt;android.view.View: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onDraw(android.graphics.Canvas)&gt;</callerMethod>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2165,30 +2198,19 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.View$MeasureSpec: int getSize(int)&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
       <method>&lt;android.view.View: android.content.Context getContext()&gt;</method>
       <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void initDrawingTools()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.view.View$MeasureSpec: int getMode(int)&gt;</method>
+      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void onMeasure(int,int)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2220,8 +2242,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.telephony.SmsManager: android.telephony.SmsManager getDefault()&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
+      <method>&lt;android.app.ActivityManager: java.util.List getRunningServices(int)&gt;</method>
+      <callerMethod>&lt;com.parand.a.g: boolean a(android.content.Context,java.util.List)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2244,17 +2266,6 @@
     <sink>
       <method>&lt;java.io.Writer: void write(java.lang.String)&gt;</method>
       <callerMethod>&lt;com.parand.b.d.a: com.parand.b.d.a a(boolean)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;java.lang.String: byte[] getBytes(java.lang.String)&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
@@ -2297,28 +2308,6 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.view.View: int getHeight()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void regenerateBackground()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.telephony.TelephonyManager: java.lang.String getSubscriberId()&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
       <method>&lt;java.lang.reflect.Array: java.lang.Object newInstance(java.lang.Class,int)&gt;</method>
       <callerMethod>&lt;com.parand.b.b.b: java.lang.Class e(java.lang.reflect.Type)&gt;</callerMethod>
     </sink>
@@ -2341,6 +2330,17 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
+      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
+      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
       <method>&lt;android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)&gt;</method>
       <callerMethod>&lt;com.parand.balesen.VoateService: void a(long)&gt;</callerMethod>
     </sink>
@@ -2352,30 +2352,8 @@
       <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
     </source>
     <sink>
-      <method>&lt;android.graphics.Bitmap: int getWidth()&gt;</method>
-      <callerMethod>&lt;com.elbirras.wificharger.LevelDisplay: void drawLogo(android.graphics.Canvas)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
       <method>&lt;android.telephony.TelephonyManager: java.lang.String getSubscriberId()&gt;</method>
       <callerMethod>&lt;com.parand.balesen.g: void run()&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>NO_SENSITIVE_SOURCE</method>
-      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.telephony.TelephonyManager: java.lang.String getLine1Number()&gt;</method>
-      <callerMethod>&lt;com.parand.balesen.e: void run()&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>

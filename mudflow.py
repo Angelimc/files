@@ -26,6 +26,8 @@ def num_sensitive_flows(sink_map, source_map, column_source, column_sink):
     count_flow = 0
     if column_source == 'NO_SENSITIVE_SOURCE':
         # get all the sources that lead to the sink
+        print('column_sink: ' + column_sink)
+        print('column_source: ' + column_source)
         parsed_sources = sink_map.get(column_sink)
         if parsed_sources:
             for parsed_source in parsed_sources:
@@ -56,6 +58,8 @@ def calc_num_flows(apk, flow, sink_map, source_map):
     if column_name and len(column_name) == 2:
         source = column_name[0].strip()
         sink = column_name[1].strip()
+        print('column source: ' + source)
+        print('column sink: ' + sink)
         if source == 'NO_SENSITIVE_SOURCE' or sink == 'NO_SENSITIVE_SINK':
             return num_sensitive_flows(sink_map, source_map, source, sink)
         sources = sink_map.get(sink)
@@ -109,17 +113,34 @@ def parse_sink(line):
     p = r'(?<=The sink ).+(?= in method )'
     s1 = re.findall(p, line)[0]
     s2 = s1.split('<')[1]
-    return '<' + s2
+    s3 = s2.split('>')[0]
+    return '<' + s3 + '>'
 
 
 def parse_source(line):
     p = r'(?<= - - ).+(?= in method )'
     s1 = re.findall(p, line)[0]
     s2 = s1.split('<')[1]
-    return '<' + s2
+    s3 = s2.split('>')[0]
+    return '<' + s3 + '>'
 
 
-def create_sink_source_map(apk):
+def update_sink_map(sink_map, sink, sources):
+    if sink in sink_map:
+        sink_map[sink] = sink_map[sink] + sources
+    else:
+        sink_map[sink] = sources
+
+
+def update_source_map(source_map, sink, sources):
+    for s in sources:
+        if s in source_map:
+            source_map[s].append(sink)
+        else:
+            source_map[s] = [sink]
+
+
+def create_source_sink_map(apk):
     output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
     sink_map = {}
     source_map = {}
@@ -131,40 +152,26 @@ def create_sink_source_map(apk):
         for line in lines:
             if contains_sink(line):
                 if collecting_sources:
-                    # add to map where sink is the key and sources are the values
-                    sink_map[sink] = sources
-                    # add to map where source is the key and sinks are the values
-                    for s in sources:
-                        if s in source_map:
-                            source_map[s].append(sink)
-                        else:
-                            source_map[s] = [sink]
+                    update_sink_map(sink_map, sink, sources)
+                    update_source_map(source_map, sink, sources)
                     sources = []
                 sink = parse_sink(line)
                 collecting_sources = True
             elif contains_source(line) and collecting_sources:
                 sources.append(parse_source(line))
             elif collecting_sources:
-                sink_map[sink] = sources
-                for s in sources:
-                    if s in source_map:
-                        source_map[s].append(sink)
-                    else:
-                        source_map[s] = [sink]
+                update_sink_map(sink_map, sink, sources)
+                update_source_map(source_map, sink, sources)
                 sources = []
+                sink = ''
                 collecting_sources = False
-
-    #for key, value in map.items():
-    #    print(key)
-    #    for i in range(len(value)):
-    #        print('--> ' + value[i])
     return sink_map, source_map
 
 
 def add_data_to_mudflow_file(apk, pid, has_flow):
     global count
     global filePath
-    sink_map, source_map = create_sink_source_map(apk)
+    sink_map, source_map = create_source_sink_map(apk)
     # create new excel sheet if count = 0 or max number of rows
     if count == 0:
         create_new_file(pid)
@@ -172,4 +179,4 @@ def add_data_to_mudflow_file(apk, pid, has_flow):
         count = 0
         create_new_file(pid)
     update_row_data(apk, pid, has_flow, sink_map, source_map)
-    count = count + 1
+    count += 1

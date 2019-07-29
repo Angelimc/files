@@ -113,6 +113,7 @@ def has_flow(apk):
     with open(output_path, 'r') as file:
         contents = file.read()
         if 'No sources found' in contents or 'No sinks found' in contents or 'No results found' in contents:
+            print('no sources or sinks found')
             return True
     return False
 
@@ -137,7 +138,7 @@ def start_experiment(apks_list_path):
         for apks in apks_list:
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
-                    run_flowdroid(apks[i])
+                    #run_flowdroid(apks[i])
                     if not contains_error(apks[i], pid):
                         add_to_processed_apks_list(apks[i], pid)
                         continue
@@ -154,7 +155,6 @@ def main():
     #num_workers = int(sys.argv[1])
     create_apks_chunks(num_workers)
     update_apks_processed(num_workers)
-
     procs = []
     for i in range(num_workers):
         apk_list_csv_path = apk_list_csv_dir + 'apks_chunk_' + str(i) + '.csv'
