@@ -1,4 +1,5 @@
 import pandas as pd
+from pandas import DataFrame
 
 
 def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
@@ -80,3 +81,8 @@ def appendToFile(input, output):
         with open(output, 'a+') as f2:
             for line in f1:
                 f2.write(line)
+
+
+def add_to_error_list(apk, pid, step, message):
+    df = DataFrame([apk, step, message]).T
+    append_df_to_excel('data/progress/errors_' + pid + '.xlsx', df, header=None)

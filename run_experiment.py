@@ -4,8 +4,10 @@ import os
 
 from pandas.errors import EmptyDataError
 
+from Utilities import add_to_error_list
 from flowdroid import run_flowdroid
 from multiprocessing import Process
+from mudflow import add_data_to_mudflow_file, parse_result
 import pandas as pd
 
 """
@@ -23,6 +25,7 @@ For each process:
     create file for outp
 
 """
+# TODO: Ask what to do with 0 flows
 #TODO: change directories
 apk_files_dir = '/Users/angeli/My_Documents/Mudflow/DataTest/'
 apk_list_csv_dir = '/Users/angeli/My_Documents/Mudflow/'
@@ -71,17 +74,16 @@ def setup_folders(id):
 #   Returns true if apk has been processed by this worker
 #   @param id: number to identify this for this worker
 #   @param current apk path being processed
-def is_processed(id, apk):
+def is_processed(pid, apk):
     # return if apk has already been processed
-    with open('data/progress/apks_processed_' + id + '.csv', 'r') as f:
+    with open('data/progress/apks_processed_' + pid + '.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
             for i in range(len(row)):
-                print(row[i] + os.path.splitext(os.path.basename(apk))[0])
                 if os.path.splitext(os.path.basename(apk))[0] in row[i]:
                     print('processed')
                     return True
-        print('not processed' + apk)
+        print('not processed')
         return False
 
 
@@ -94,20 +96,6 @@ def add_to_processed_apks_list(apk, id):
         writer.writerow([apk])
 
 
-def start_experiment(apks_csv_path):
-    pid = os.path.splitext(apks_csv_path)[0][-1:]
-    setup_folders(pid)
-    with open(apks_csv_path, 'r') as f:
-        mycsv = csv.reader(f, delimiter=',')
-        for apks in mycsv:
-            for i in range(len(apks)):
-                if not is_processed(pid, apks[i]):
-                    run_flowdroid(apks[i])
-                    #add_data_to_mudflow_file(apks[i])
-                    #add_data_to_susi_file(apks[i])
-                    add_to_processed_apks_list(apks[i], pid)
-
-
 def update_apks_processed():
     apks_processed_files = [i for i in glob.glob('data/progress/apks_processed_*.csv')]
     if apks_processed_files:
@@ -118,6 +106,44 @@ def update_apks_processed():
                 combined_csv.to_csv(apks_processed_file, index=False, encoding='utf-8-sig')
         except EmptyDataError:
             df = pd.DataFrame()
+
+
+# TODO: check if has no source
+def has_flow(apk):
+    output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
+    with open(output_path, 'r') as file:
+        contents = file.read()
+        if 'No sources found' in contents or 'No sinks found' in contents or 'No results found' in contents:
+            return True
+    return False
+
+
+def output_file_exists(apk, pid):
+    output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
+    if os.path.exists(output_path):
+        return True
+    else:
+        add_to_error_list(apk, pid, 'flowdroid', 'flowdroid text file output does not exist: ' + output_path)
+
+
+def start_experiment(apks_list_path):
+    pid = os.path.splitext(apks_list_path)[0][-1:]
+    setup_folders(pid)
+    with open(apks_list_path, 'r') as f:
+        apks_list = csv.reader(f, delimiter=',')
+        for apks in apks_list:
+            for i in range(len(apks)):
+                if not is_processed(pid, apks[i]):
+                    print(apks[i])
+                    #run_flowdroid(apks[i])
+                    if not output_file_exists(apks[i]):
+                        continue
+                    contain_flow = has_flow(apks[i])
+                    if contain_flow:
+                        pass
+                        # add_data_to_susi_file(apks[i])
+                    add_data_to_mudflow_file(apks[i], pid, contain_flow)
+                    add_to_processed_apks_list(apks[i], pid)
 
 
 def main():
@@ -134,7 +160,6 @@ def main():
         p.start()
     for p in procs:
         p.join()
-
 
 
 if __name__ =='__main__':

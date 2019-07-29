@@ -1,0 +1,442 @@
+<list>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.os.Bundle: java.lang.Object get(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.content.Intent: android.os.Bundle getExtras()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.os.Bundle: java.lang.Object get(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsMessage: java.lang.String getMessageBody()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;java.lang.String: boolean startsWith(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsMessage: java.lang.String getOriginatingAddress()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsMessage: java.lang.String getMessageBody()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsManager: android.telephony.SmsManager getDefault()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsMessage: java.lang.String getOriginatingAddress()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsMessage: java.lang.String getMessageBody()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: android.view.MenuInflater getMenuInflater()&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: android.view.MenuInflater getMenuInflater()&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsMessage: java.lang.String getMessageBody()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;java.lang.String: java.lang.String substring(int,int)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;java.lang.Class: java.lang.String getCanonicalName()&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void hideIcon(android.content.Context)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.RebootReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: android.view.MenuInflater getMenuInflater()&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;java.lang.String: boolean startsWith(java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;java.lang.String: java.lang.String substring(int,int)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.RebootReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>NO_SENSITIVE_SINK</method>
+      <callerMethod>NO_SENSITIVE_SINK</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;java.lang.Class: java.lang.String getCanonicalName()&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void hideIcon(android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsManager: android.telephony.SmsManager getDefault()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.RebootReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.Intent: android.os.Bundle getExtras()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setTitle(int)&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.util.Log: int e(java.lang.String,java.lang.String)&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.AlertDialog$Builder: android.app.AlertDialog show()&gt;</method>
+      <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>NO_SENSITIVE_SOURCE</method>
+      <callerMethod>NO_SENSITIVE_SOURCE</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.content.Intent: java.lang.String getAction()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.RebootReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+</list>
