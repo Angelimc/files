@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2b43ee6-714e-467d-92ed-6a638fa8302a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sources_sinks_categories/no_sensitive_sink.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources_sinks_categories/no_sensitive_source.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourcesAndSinks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesAndSinks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Column_Names.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Column_Names.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_3933885915472dea544c74baa4c1e351.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/log/VirusShare_89d2d4a8cf9509236d020a6ce6246274.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/log/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_086a69604bb4b453593465c08672803c7.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0a6be7e653dbb40ff9d7aead105648441.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0ec6aa27a71e34e449c3b6440e47b61ce.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0f85a19a96f17476289bf62e8e00de880.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_fd999ee440cb79f8f6aa99c3c96a844e.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_fdd9edf3569a4ae039fc7fe82a1ffc43.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/progress/apks_processed_0.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mudflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/mudflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" afterDir="false" />

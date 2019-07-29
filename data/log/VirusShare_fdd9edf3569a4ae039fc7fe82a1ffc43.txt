@@ -1,5 +1,5 @@
 [main] INFO soot.jimple.infoflow.taintWrappers.EasyTaintWrapper - Loaded wrapper entries for 70 classes and 11 exclusions.
-[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.01151218 seconds
+[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.012726164 seconds
 Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
 Warning: java.lang.ref.Finalizer is a phantom class!
 [main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
@@ -209,8 +209,8 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [Spark] Pointer Assignment Graph in 0.3 seconds.
 [Spark] Type masks in 0.0 seconds.
 [Spark] Pointer Graph simplified in 0.0 seconds.
-[Spark] Propagation in 2.6 seconds.
-[Spark] Solution found in 2.6 seconds.
+[Spark] Propagation in 4.2 seconds.
+[Spark] Solution found in 4.2 seconds.
 Callback analysis done.
 Warning: LinearLayout is a phantom class!
 Warning: com.style_7.analogclocklivewallpaper_77.LinearLayout is a phantom class!
@@ -1051,8 +1051,8 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [Spark] Pointer Assignment Graph in 0.0 seconds.
 [Spark] Type masks in 0.0 seconds.
 [Spark] Pointer Graph simplified in 0.0 seconds.
-[Spark] Propagation in 2.7 seconds.
-[Spark] Solution found in 2.7 seconds.
+[Spark] Propagation in 2.1 seconds.
+[Spark] Solution found in 2.1 seconds.
 Running incremental callback analysis for 5 components...
 Incremental callback analysis done.
 Found 24 callback methods for 5 components
@@ -1889,11 +1889,11 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [Spark] Pointer Assignment Graph in 0.0 seconds.
 [Spark] Type masks in 0.0 seconds.
 [Spark] Pointer Graph simplified in 0.0 seconds.
-[Spark] Propagation in 2.8 seconds.
-[Spark] Solution found in 2.8 seconds.
-[main] INFO soot.jimple.infoflow.Infoflow - Callgraph construction took 2.995193618 seconds
+[Spark] Propagation in 2.1 seconds.
+[Spark] Solution found in 2.1 seconds.
+[main] INFO soot.jimple.infoflow.Infoflow - Callgraph construction took 2.274837877 seconds
 [main] INFO soot.jimple.infoflow.codeOptimization.InterproceduralConstantValuePropagator - Removing side-effect free methods is disabled
-[main] INFO soot.jimple.infoflow.Infoflow - Dead code elimination took 0.149790521 seconds
+[main] INFO soot.jimple.infoflow.Infoflow - Dead code elimination took 0.119596239 seconds
 [main] INFO soot.jimple.infoflow.Infoflow - Callgraph has 8205 edges
 [main] INFO soot.jimple.infoflow.Infoflow - Starting Taint Analysis
 [main] INFO soot.jimple.infoflow.data.FlowDroidMemoryManager - Initializing FlowDroid memory manager...
@@ -1908,4 +1908,4 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [main] INFO soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Taint analysis enabled: true
 [main] INFO soot.jimple.infoflow.Infoflow - Looking for sources and sinks...
 [main] ERROR soot.jimple.infoflow.Infoflow - No sources found, aborting analysis
-Analysis has run for 22.127904624 seconds
+Analysis has run for 22.272272485 seconds

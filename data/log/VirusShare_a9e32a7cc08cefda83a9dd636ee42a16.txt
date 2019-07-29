@@ -1,5 +1,5 @@
 [main] INFO soot.jimple.infoflow.taintWrappers.EasyTaintWrapper - Loaded wrapper entries for 70 classes and 11 exclusions.
-[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.01120729 seconds
+[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.013165423 seconds
 Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
 Warning: java.lang.ref.Finalizer is a phantom class!
 [main] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Context
@@ -181,11 +181,11 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 
 [main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Collecting callbacks in DEFAULT mode...
 [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
-[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Pointer Assignment Graph in 0.1 seconds.
 [Spark] Type masks in 0.0 seconds.
 [Spark] Pointer Graph simplified in 0.0 seconds.
-[Spark] Propagation in 1.7 seconds.
-[Spark] Solution found in 1.7 seconds.
+[Spark] Propagation in 1.8 seconds.
+[Spark] Solution found in 1.8 seconds.
 Callback analysis done.
 Warning: RelativeLayout is a phantom class!
 Warning: com.elbirras.wificharger.RelativeLayout is a phantom class!
@@ -698,11 +698,11 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [Spark] Pointer Assignment Graph in 0.0 seconds.
 [Spark] Type masks in 0.0 seconds.
 [Spark] Pointer Graph simplified in 0.0 seconds.
-[Spark] Propagation in 1.5 seconds.
-[Spark] Solution found in 1.5 seconds.
-[main] INFO soot.jimple.infoflow.Infoflow - Callgraph construction took 1.578712433 seconds
+[Spark] Propagation in 1.6 seconds.
+[Spark] Solution found in 1.6 seconds.
+[main] INFO soot.jimple.infoflow.Infoflow - Callgraph construction took 1.648886284 seconds
 [main] INFO soot.jimple.infoflow.codeOptimization.InterproceduralConstantValuePropagator - Removing side-effect free methods is disabled
-[main] INFO soot.jimple.infoflow.Infoflow - Dead code elimination took 0.081122503 seconds
+[main] INFO soot.jimple.infoflow.Infoflow - Dead code elimination took 0.079967719 seconds
 [main] INFO soot.jimple.infoflow.Infoflow - Callgraph has 2796 edges
 [main] INFO soot.jimple.infoflow.Infoflow - Starting Taint Analysis
 [main] INFO soot.jimple.infoflow.data.FlowDroidMemoryManager - Initializing FlowDroid memory manager...
@@ -719,7 +719,7 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [main] INFO soot.jimple.infoflow.Infoflow - Source lookup done, found 59 sources and 118 sinks.
 [main] INFO soot.jimple.infoflow.Infoflow - Taint wrapper hits: 8084
 [main] INFO soot.jimple.infoflow.Infoflow - Taint wrapper misses: 37539
-[main] INFO soot.jimple.infoflow.Infoflow - IFDS problem with 141943 forward and 62360 backward edges solved, processing 48 results...
+[main] INFO soot.jimple.infoflow.Infoflow - IFDS problem with 141942 forward and 62359 backward edges solved, processing 48 results...
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Obtainted 48 connections between sources and sinks
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 1 with task id 0
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 2 with task id 1
@@ -769,558 +769,562 @@ Warning: java.lang.ref.Finalizer is a phantom class!
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 46 with task id 45
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 47 with task id 46
 [main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 48 with task id 47
-[main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Path processing took 0.003854127 seconds in total
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Path processing took 0.006415816 seconds in total
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handAcceleration") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void startActivity(android.content.Intent)>($r1) in method <com.elbirras.wificharger.MainActivity: void startInfoActivity(int)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void startScan()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void startScan()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void resetControls()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r3.<android.content.res.Resources: java.lang.String getString(int)>(2131034117) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handVelocity") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
+[main] INFO soot.jimple.infoflow.Infoflow - - $i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>() in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void resetControls()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void startScan()>
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void startScan()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void resetControls()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $l0 = virtualinvoke $r2.<android.os.Bundle: long getLong(java.lang.String)>("lastHandMoveTime") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4) in method <com.elbirras.wificharger.LedTextView: void init(android.content.Context)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4) in method <com.elbirras.wificharger.LedTextView: void init(android.content.Context)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>() in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r3.<android.content.res.Resources: java.lang.String getString(int)>(2131034117) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void resetControls()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void resetControls()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void startScan()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handVelocity") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $i0 = virtualinvoke $r7.<android.net.wifi.WifiManager: int getWifiState()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - $r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi") in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handPosition") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4) in method <com.elbirras.wificharger.LedTextView: void init(android.content.Context)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4) in method <com.elbirras.wificharger.LedTextView: void init(android.content.Context)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $i0 = virtualinvoke $r2.<android.content.Intent: int getIntExtra(java.lang.String,int)>("text_id", 0) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>() in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void startScan()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void startScan()>
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void resetControls()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>() in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r3 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i0, $i1, $r2) in method <com.elbirras.wificharger.LevelDisplay: void regenerateBackground()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>() in method <com.elbirras.wificharger.LevelDisplay: void regenerateBackground()>
-[main] INFO soot.jimple.infoflow.Infoflow - - $i1 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getHeight()>() in method <com.elbirras.wificharger.LevelDisplay: void regenerateBackground()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handTarget") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handAcceleration") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi") in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void startScan()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void resetControls()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void startScan()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
 [main] INFO soot.jimple.infoflow.Infoflow - - $i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>() in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
 [main] INFO soot.jimple.infoflow.Infoflow - - $i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getHeight()>() in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $i0 = virtualinvoke $r2.<android.content.Intent: int getIntExtra(java.lang.String,int)>("text_id", 0) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>() in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handTarget") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void startActivity(android.content.Intent)>($r1) in method <com.elbirras.wificharger.MainActivity: void startInfoActivity(int)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $i0 = virtualinvoke $r7.<android.net.wifi.WifiManager: int getWifiState()>() in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - $r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi") in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - The sink specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.TopicActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink $l0 = virtualinvoke $r2.<android.os.Bundle: long getLong(java.lang.String)>("lastHandMoveTime") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r3 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i0, $i1, $r2) in method <com.elbirras.wificharger.LevelDisplay: void regenerateBackground()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - $i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>() in method <com.elbirras.wificharger.LevelDisplay: void regenerateBackground()>
+[main] INFO soot.jimple.infoflow.Infoflow - - $i1 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getHeight()>() in method <com.elbirras.wificharger.LevelDisplay: void regenerateBackground()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi") in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - $r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState") in method <com.elbirras.wificharger.LevelDisplay: void onRestoreInstanceState(android.os.Parcelable)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink $i0 = virtualinvoke $r4.<android.net.wifi.WifiManager: int getWifiState()>() in method <com.elbirras.wificharger.MainActivity: void startScan()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - - $r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi") in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()> was called with values from the following sources:
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
 [main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void resetControls()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void resetControls()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void startScan()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void startScan()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040) in method <com.elbirras.wificharger.MainActivity: void onCreate(android.os.Bundle)>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8) in method <com.elbirras.wificharger.MainActivity: void resetControls()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0) in method <com.elbirras.wificharger.MainActivity: void startScan()>
-[main] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()> was called with values from the following sources:
-[main] INFO soot.jimple.infoflow.Infoflow - - $i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>() in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1) in method <com.elbirras.wificharger.LevelDisplay: void initDrawingTools()>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.view.Window getWindow()>
-<android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.view.Window getWindow()>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
-<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
-<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
-<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
-<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
-<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.view.Window getWindow()>
-<android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.view.Window getWindow()>
-<android.view.ContextThemeWrapper: android.content.res.Resources getResources()> -> <android.content.res.Resources: java.lang.String getString(int)>
-<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
-<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)> -> <android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>
-<android.widget.TextView: void setTypeface(android.graphics.Typeface)> -> <android.widget.TextView: void setTypeface(android.graphics.Typeface)>
-<android.app.Activity: android.content.Intent getIntent()> -> <android.content.Intent: int getIntExtra(java.lang.String,int)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
+[main] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2) in method <com.elbirras.wificharger.LevelDisplay: android.os.Parcelable onSaveInstanceState()>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
-<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
 <android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
-<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
-<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
+<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putBoolean(java.lang.String,boolean)>
 <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.view.ContextThemeWrapper: android.content.res.Resources getResources()>
 <android.app.Activity: void setContentView(int)> -> <android.view.ContextThemeWrapper: android.content.res.Resources getResources()>
-<android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.content.Intent getIntent()>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.content.Intent getIntent()>
-<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
-<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)> -> <android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>
-<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>
-<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
-<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
-<android.view.View: int getWidth()> -> <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>
-<android.view.View: int getHeight()> -> <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>
-<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: java.lang.Object getSystemService(java.lang.String)>
-<android.app.Activity: void setContentView(int)> -> <android.app.Activity: java.lang.Object getSystemService(java.lang.String)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> EXPLICIT_INTENT
+<android.app.Activity: void setContentView(int)> -> EXPLICIT_INTENT
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.view.Window getWindow()>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.view.Window getWindow()>
 <android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
 <android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.graphics.Matrix: void setScale(float,float)> -> <android.graphics.Matrix: void setScale(float,float)>
+<android.graphics.Bitmap: int getWidth()> -> <android.graphics.Matrix: void setScale(float,float)>
+<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
+<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
+<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: long getLong(java.lang.String)>
+<android.widget.TextView: void setTypeface(android.graphics.Typeface)> -> <android.widget.TextView: void setTypeface(android.graphics.Typeface)>
+<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)> -> <android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.content.Intent getIntent()>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.content.Intent getIntent()>
+<android.view.ContextThemeWrapper: android.content.res.Resources getResources()> -> <android.content.res.Resources: java.lang.String getString(int)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.view.Window getWindow()>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.view.Window getWindow()>
+<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
+<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void setContentView(int)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void setContentView(int)>
+<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
+<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.net.wifi.WifiManager: int getWifiState()>
+<android.app.Activity: java.lang.Object getSystemService(java.lang.String)> -> <android.net.wifi.WifiManager: int getWifiState()>
+<android.app.Activity: void setContentView(int)> -> <android.net.wifi.WifiManager: int getWifiState()>
+<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
+<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)> -> <android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>
+<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>
+<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
+<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
 <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)> -> <android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>
 <android.graphics.Matrix: void setScale(float,float)> -> <android.graphics.Matrix: void setScale(float,float)>
 <android.graphics.Bitmap: int getWidth()> -> <android.graphics.Matrix: void setScale(float,float)>
 <android.graphics.Bitmap: int getHeight()> -> <android.graphics.Matrix: void setScale(float,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.app.Activity: android.content.Intent getIntent()> -> <android.content.Intent: int getIntExtra(java.lang.String,int)>
+<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: float getFloat(java.lang.String)>
 <android.app.Activity: void setContentView(int)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
+<android.view.View: int getWidth()> -> <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>
+<android.view.View: int getHeight()> -> <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>
 <android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
 <android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: java.lang.Object getSystemService(java.lang.String)>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: java.lang.Object getSystemService(java.lang.String)>
 <android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> EXPLICIT_INTENT
-<android.app.Activity: void setContentView(int)> -> EXPLICIT_INTENT
 <android.app.Activity: void onCreate(android.os.Bundle)> -> <android.net.wifi.WifiManager: int getWifiState()>
-<android.app.Activity: void setContentView(int)> -> <android.net.wifi.WifiManager: int getWifiState()>
 <android.app.Activity: java.lang.Object getSystemService(java.lang.String)> -> <android.net.wifi.WifiManager: int getWifiState()>
-<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void setContentView(int)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void setContentView(int)>
-<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> <android.os.Bundle: long getLong(java.lang.String)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.net.wifi.WifiManager: int getWifiState()>
 <android.app.Activity: void setContentView(int)> -> <android.net.wifi.WifiManager: int getWifiState()>
-<android.app.Activity: java.lang.Object getSystemService(java.lang.String)> -> <android.net.wifi.WifiManager: int getWifiState()>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
-<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
-<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
-<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putLong(java.lang.String,long)>
 <android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void setContentView(int)>
 <android.app.Activity: void setContentView(int)> -> <android.app.Activity: void setContentView(int)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putFloat(java.lang.String,float)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.app.Activity: void setContentView(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.widget.ImageView: void setVisibility(int)> -> <android.widget.ImageView: void setVisibility(int)>
-<android.graphics.Bitmap: int getWidth()> -> <android.graphics.Matrix: void setScale(float,float)>
-<android.graphics.Matrix: void setScale(float,float)> -> <android.graphics.Matrix: void setScale(float,float)>
-<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
-<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
-<android.view.View: int getWidth()> -> NO_SENSITIVE_SINK
-<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
-<android.net.wifi.WifiManager: int getWifiState()> -> NO_SENSITIVE_SINK
-<android.view.View: int getWidth()> -> NO_SENSITIVE_SINK
-<android.graphics.Bitmap: int getHeight()> -> NO_SENSITIVE_SINK
-<android.os.Bundle: long getLong(java.lang.String)> -> NO_SENSITIVE_SINK
-<android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()> -> NO_SENSITIVE_SINK
-<android.view.View$MeasureSpec: int getMode(int)> -> NO_SENSITIVE_SINK
-<android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)> -> NO_SENSITIVE_SINK
-<android.view.View$MeasureSpec: int getSize(int)> -> NO_SENSITIVE_SINK
+<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
+<android.os.Bundle: void putLong(java.lang.String,long)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> <android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>
 <android.app.Activity: android.view.Window getWindow()> -> NO_SENSITIVE_SINK
-<java.lang.Class: java.lang.String getSimpleName()> -> NO_SENSITIVE_SINK
-<android.app.Activity: android.view.Window getWindow()> -> NO_SENSITIVE_SINK
-<android.content.Intent: int getIntExtra(java.lang.String,int)> -> NO_SENSITIVE_SINK
-<android.view.View: android.content.Context getContext()> -> NO_SENSITIVE_SINK
-<android.view.View$MeasureSpec: int getMode(int)> -> NO_SENSITIVE_SINK
-<android.view.View$MeasureSpec: int getSize(int)> -> NO_SENSITIVE_SINK
-<android.net.wifi.WifiManager: int getWifiState()> -> NO_SENSITIVE_SINK
-<android.graphics.Bitmap: int getWidth()> -> NO_SENSITIVE_SINK
-<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
+<android.view.View: int getWidth()> -> NO_SENSITIVE_SINK
 <android.content.res.Resources: java.lang.String getString(int)> -> NO_SENSITIVE_SINK
+<android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)> -> NO_SENSITIVE_SINK
+<android.net.wifi.WifiManager: int getWifiState()> -> NO_SENSITIVE_SINK
+<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
+<android.net.wifi.WifiManager: int getWifiState()> -> NO_SENSITIVE_SINK
+<android.view.View$MeasureSpec: int getMode(int)> -> NO_SENSITIVE_SINK
+<java.lang.Class: java.lang.String getSimpleName()> -> NO_SENSITIVE_SINK
+<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
+<android.view.View: int getWidth()> -> NO_SENSITIVE_SINK
+<android.view.View$MeasureSpec: int getSize(int)> -> NO_SENSITIVE_SINK
 <android.view.View: android.content.Context getContext()> -> NO_SENSITIVE_SINK
-NO_SENSITIVE_SOURCE -> <android.view.View: int getWidth()>
+<android.view.View$MeasureSpec: int getMode(int)> -> NO_SENSITIVE_SINK
+<android.view.View$MeasureSpec: int getSize(int)> -> NO_SENSITIVE_SINK
+<android.view.View: android.content.Context getContext()> -> NO_SENSITIVE_SINK
+<android.content.Intent: int getIntExtra(java.lang.String,int)> -> NO_SENSITIVE_SINK
+<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
+<android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()> -> NO_SENSITIVE_SINK
+<android.os.Bundle: float getFloat(java.lang.String)> -> NO_SENSITIVE_SINK
+<android.os.Bundle: long getLong(java.lang.String)> -> NO_SENSITIVE_SINK
+<android.graphics.Bitmap: int getWidth()> -> NO_SENSITIVE_SINK
+<android.graphics.Bitmap: int getHeight()> -> NO_SENSITIVE_SINK
+<android.app.Activity: android.view.Window getWindow()> -> NO_SENSITIVE_SINK
+NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()>
 NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
-NO_SENSITIVE_SOURCE -> <android.net.NetworkInfo: android.net.NetworkInfo$State getState()>
-NO_SENSITIVE_SOURCE -> <android.util.Log: int d(java.lang.String,java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getLine1Number()>
+NO_SENSITIVE_SOURCE -> <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
 NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()>
-NO_SENSITIVE_SOURCE -> <android.util.Log: int w(java.lang.String,java.lang.String)>
+NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: android.content.Intent setClass(android.content.Context,java.lang.Class)>
 NO_SENSITIVE_SOURCE -> <java.io.Writer: java.io.Writer append(char)>
-NO_SENSITIVE_SOURCE -> <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>
-NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteDatabase: android.database.Cursor rawQuery(java.lang.String,java.lang.String[])>
-NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getSize(int)>
-NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getSubscriberId()>
+NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getWidth()>
+NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>
+NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.util.Log: int d(java.lang.String,java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getMode(int)>
+NO_SENSITIVE_SOURCE -> <android.util.Log: int d(java.lang.String,java.lang.String)>
 NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.String getSimpleName()>
 NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
-NO_SENSITIVE_SOURCE -> <android.view.View: android.content.Context getContext()>
-NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getHeight()>
-NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getMode(int)>
-NO_SENSITIVE_SOURCE -> <java.net.HttpURLConnection: int getResponseCode()>
-NO_SENSITIVE_SOURCE -> <android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
-NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.String getName()>
+NO_SENSITIVE_SOURCE -> <android.util.Log: int w(java.lang.String,java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getSize(int)>
+NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()>
 NO_SENSITIVE_SOURCE -> <android.net.NetworkInfo: android.net.NetworkInfo$State getState()>
-NO_SENSITIVE_SOURCE -> <java.lang.String: byte[] getBytes()>
-NO_SENSITIVE_SOURCE -> <java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+NO_SENSITIVE_SOURCE -> <android.view.View: android.content.Context getContext()>
+NO_SENSITIVE_SOURCE -> <android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
 NO_SENSITIVE_SOURCE -> <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
-NO_SENSITIVE_SOURCE -> <java.lang.ThreadLocal: void set(java.lang.Object)>
-NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.view.View: int getHeight()>
-NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()>
-NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getWidth()>
-NO_SENSITIVE_SOURCE -> <android.view.View: int getWidth()>
-NO_SENSITIVE_SOURCE -> <android.app.AlarmManager: void set(int,long,android.app.PendingIntent)>
-NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getHeight()>
-NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>
-NO_SENSITIVE_SOURCE -> <android.util.Log: int d(java.lang.String,java.lang.String)>
-NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>
-NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()>
-NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getSubscriberId()>
-NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getMode(int)>
-NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getSubscriberId()>
+NO_SENSITIVE_SOURCE -> <java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>
 NO_SENSITIVE_SOURCE -> <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
 NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getWidth()>
-NO_SENSITIVE_SOURCE -> <android.content.Intent: android.content.Intent setClass(android.content.Context,java.lang.Class)>
-NO_SENSITIVE_SOURCE -> <java.lang.String: java.lang.String substring(int,int)>
-NO_SENSITIVE_SOURCE -> <android.app.ActivityManager: java.util.List getRunningServices(int)>
-NO_SENSITIVE_SOURCE -> <android.util.Log: int d(java.lang.String,java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>
-NO_SENSITIVE_SOURCE -> <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
-NO_SENSITIVE_SOURCE -> <android.content.ComponentName: java.lang.String getClassName()>
-NO_SENSITIVE_SOURCE -> <java.lang.ThreadLocal: java.lang.Object get()>
-NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.view.View: int getWidth()>
 NO_SENSITIVE_SOURCE -> <java.io.ByteArrayOutputStream: byte[] toByteArray()>
+NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()>
+NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>
+NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getSubscriberId()>
+NO_SENSITIVE_SOURCE -> <android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()>
+NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>
+NO_SENSITIVE_SOURCE -> <android.util.Log: int d(java.lang.String,java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.app.AlarmManager: void set(int,long,android.app.PendingIntent)>
+NO_SENSITIVE_SOURCE -> <android.view.View: int getWidth()>
+NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getLine1Number()>
+NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getHeight()>
+NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteDatabase: android.database.Cursor rawQuery(java.lang.String,java.lang.String[])>
+NO_SENSITIVE_SOURCE -> <java.lang.String: byte[] getBytes()>
+NO_SENSITIVE_SOURCE -> <android.view.View: int getWidth()>
+NO_SENSITIVE_SOURCE -> <java.lang.ThreadLocal: void set(java.lang.Object)>
+NO_SENSITIVE_SOURCE -> <java.net.HttpURLConnection: int getResponseCode()>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>
+NO_SENSITIVE_SOURCE -> <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
+NO_SENSITIVE_SOURCE -> <java.lang.ThreadLocal: java.lang.Object get()>
+NO_SENSITIVE_SOURCE -> <android.app.ActivityManager: java.util.List getRunningServices(int)>
+NO_SENSITIVE_SOURCE -> <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getSubscriberId()>
+NO_SENSITIVE_SOURCE -> <android.content.ComponentName: java.lang.String getClassName()>
+NO_SENSITIVE_SOURCE -> <java.net.URL: java.net.URLConnection openConnection()>
+NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.String getName()>
+NO_SENSITIVE_SOURCE -> <android.view.View: int getWidth()>
+NO_SENSITIVE_SOURCE -> <java.lang.String: java.lang.String substring(int,int)>
+NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getMode(int)>
+NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getSize(int)>
+NO_SENSITIVE_SOURCE -> <android.view.View: android.content.Context getContext()>
+NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>
+NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <java.lang.String: byte[] getBytes(java.lang.String)>
 NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
 NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: int getNetworkType()>
-NO_SENSITIVE_SOURCE -> <android.view.View$MeasureSpec: int getSize(int)>
-NO_SENSITIVE_SOURCE -> <java.net.URL: java.net.URLConnection openConnection()>
-NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>
-NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getWidth()>
-NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>
-NO_SENSITIVE_SOURCE -> <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
-NO_SENSITIVE_SOURCE -> <java.lang.reflect.Array: java.lang.Object newInstance(java.lang.Class,int)>
-NO_SENSITIVE_SOURCE -> <java.lang.String: byte[] getBytes(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.database.sqlite.SQLiteOpenHelper: android.database.sqlite.SQLiteDatabase getWritableDatabase()>
-NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getHeight()>
+NO_SENSITIVE_SOURCE -> <android.view.View: int getHeight()>
 NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getSubscriberId()>
-NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <java.io.Writer: void write(java.lang.String)>
-NO_SENSITIVE_SOURCE -> <android.view.View: android.content.Context getContext()>
+NO_SENSITIVE_SOURCE -> <java.lang.reflect.Array: java.lang.Object newInstance(java.lang.Class,int)>
+NO_SENSITIVE_SOURCE -> <android.net.NetworkInfo: android.net.NetworkInfo$State getState()>
+NO_SENSITIVE_SOURCE -> <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>
+NO_SENSITIVE_SOURCE -> <android.graphics.Bitmap: int getWidth()>
+NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getSubscriberId()>
 NO_SENSITIVE_SOURCE -> <android.telephony.TelephonyManager: java.lang.String getLine1Number()>
-Found 214 results
-Maximum memory consumption: 504.109672 MB
-Analysis has run for 12.332523374 seconds
+Found 216 results
+Maximum memory consumption: 340.755064 MB
+Analysis has run for 13.094492094 seconds
 Collected sources:
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handAcceleration")
-	virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17)
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handPosition")
-	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
-	$r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi")
+	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
 	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
-	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handVelocity")
-	$i0 = virtualinvoke $r4.<android.net.wifi.WifiManager: int getWifiState()>()
-	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
-	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getHeight()>()
-	virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8)
-	virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17)
-	$l0 = virtualinvoke $r2.<android.os.Bundle: long getLong(java.lang.String)>("lastHandMoveTime")
-	virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0)
-	$r5 = staticinvoke <android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()>()
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0)
-	$i2 = staticinvoke <android.view.View$MeasureSpec: int getMode(int)>($i0)
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
+	$r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState")
+	$r4 = virtualinvoke $r3.<android.content.res.Resources: java.lang.String getString(int)>(2131034117)
 	$r3 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i0, $i1, $r2)
+	$i0 = virtualinvoke $r4.<android.net.wifi.WifiManager: int getWifiState()>()
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handPosition")
 	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8)
-	$i1 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i1)
-	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
-	$r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>()
-	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
-	$i0 = virtualinvoke $r2.<android.content.Intent: int getIntExtra(java.lang.String,int)>("text_id", 0)
-	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
-	$r9 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: android.content.Context getContext()>()
-	virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2)
-	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getHeight()>()
+	$i0 = virtualinvoke $r7.<android.net.wifi.WifiManager: int getWifiState()>()
+	virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17)
+	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0)
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
 	$i0 = staticinvoke <android.view.View$MeasureSpec: int getMode(int)>($i1)
+	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
+	$r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>()
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handVelocity")
 	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
-	virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0)
-	virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040)
-	$r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>()
+	virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0)
+	virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0)
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
 	$i3 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i0)
 	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0)
-	virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0)
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0)
-	$i0 = virtualinvoke $r7.<android.net.wifi.WifiManager: int getWifiState()>()
-	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getWidth()>()
-	$r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>()
-	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handTarget")
 	virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(0)
-	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
-	virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041)
-	$r4 = virtualinvoke $r3.<android.content.res.Resources: java.lang.String getString(int)>(2131034117)
-	virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4)
-	$i1 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getHeight()>()
 	$r9 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: android.content.Context getContext()>()
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	$r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState")
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0)
-Collected sinks:
-	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
-	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	virtualinvoke $r17.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r9, null, $r12, null, null)
-	$r6 = virtualinvoke $r5.<android.net.NetworkInfo: android.net.NetworkInfo$State getState()>()
-	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
-	virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()
 	virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17)
-	virtualinvoke $r2.<java.io.Writer: void write(java.lang.String)>($r1)
-	$r5 = staticinvoke <android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()>()
-	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r3, "Background not created")
-	virtualinvoke $r2.<java.io.Writer: java.io.Writer append(char)>(44)
-	$r3 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i0, $i1, $r2)
-	virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8)
-	$r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r4, 0, $r3, 0)
-	$r8 = virtualinvoke $r5.<android.database.sqlite.SQLiteDatabase: android.database.Cursor rawQuery(java.lang.String,java.lang.String[])>("select ct from tasks where t=? and c=?", $r6)
-	$i1 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i1)
-	$r3 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
-	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
-	$r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>()
-	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>(")]}\'\n")
-	virtualinvoke $r1.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r3, null, $r4, null, null)
-	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
-	$i0 = virtualinvoke $r2.<android.content.Intent: int getIntExtra(java.lang.String,int)>("text_id", 0)
-	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
-	$r9 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: android.content.Context getContext()>()
-	virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2)
-	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getHeight()>()
-	$i0 = staticinvoke <android.view.View$MeasureSpec: int getMode(int)>($i1)
-	$i1 = virtualinvoke $r4.<java.net.HttpURLConnection: int getResponseCode()>()
-	$r16 = virtualinvoke $r13.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r14, null, $r9, null, null)
-	virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0)
+	virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4)
 	virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040)
-	$r15 = virtualinvoke $r13.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r14, null, null, null, "display_name COLLATE LOCALIZED ASC")
-	$r7 = virtualinvoke $r1.<java.lang.Class: java.lang.String getName()>()
-	virtualinvoke $r5.<android.net.NetworkInfo: android.net.NetworkInfo$State getState()>()
-	$r4 = virtualinvoke $r1.<java.lang.String: byte[] getBytes()>()
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0)
-	virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0)
-	virtualinvoke $r4.<java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>("GET")
-	$r3 = virtualinvoke $r2.<android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>()
-	$r5 = virtualinvoke $r4.<android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>(1)
-	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
-	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
-	virtualinvoke $r5.<java.lang.ThreadLocal: void set(java.lang.Object)>($r6)
-	virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4)
-	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>("\n")
-	$i1 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getHeight()>()
-	$r5 = virtualinvoke $r4.<com.parand.a.f: android.database.sqlite.SQLiteDatabase getWritableDatabase()>()
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	$r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState")
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0)
-	virtualinvoke $r3.<java.io.Writer: void write(java.lang.String)>($r4)
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handAcceleration")
-	virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17)
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handPosition")
-	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
-	$r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi")
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handVelocity")
-	$i0 = virtualinvoke $r4.<android.net.wifi.WifiManager: int getWifiState()>()
-	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
-	virtualinvoke $r2.<android.app.AlarmManager: void set(int,long,android.app.PendingIntent)>(0, $l0, $r5)
-	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getHeight()>()
+	$i2 = staticinvoke <android.view.View$MeasureSpec: int getMode(int)>($i0)
 	virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8)
-	$r1 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>()
-	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
+	$i1 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i1)
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0)
+	$r9 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: android.content.Context getContext()>()
+	$i0 = virtualinvoke $r2.<android.content.Intent: int getIntExtra(java.lang.String,int)>("text_id", 0)
+	virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0)
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handTarget")
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0)
+	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	$r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi")
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getHeight()>()
+	$i1 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getHeight()>()
+	$r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>()
+	virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8)
+	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+	virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2)
+	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+	$r5 = staticinvoke <android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()>()
+	virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041)
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handAcceleration")
+	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
 	$l0 = virtualinvoke $r2.<android.os.Bundle: long getLong(java.lang.String)>("lastHandMoveTime")
-	virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0)
+	$r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>()
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0)
+	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getWidth()>()
+	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getHeight()>()
+	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
+	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
+Collected sinks:
+	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
+	$r5 = virtualinvoke $r4.<com.parand.a.f: android.database.sqlite.SQLiteDatabase getWritableDatabase()>()
+	virtualinvoke $r17.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r9, null, $r12, null, null)
+	$r5 = virtualinvoke $r4.<android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>(1)
+	virtualinvoke $r3.<java.io.Writer: void write(java.lang.String)>("\"")
+	$r1 = virtualinvoke $r2.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("superState")
+	$r3 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i0, $i1, $r2)
+	virtualinvoke $r3.<java.io.Writer: void write(java.lang.String)>($r4)
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handPosition")
+	virtualinvoke $r2.<java.io.Writer: void write(java.lang.String)>("null")
+	virtualinvoke $r2.<android.content.Intent: android.content.Intent setClass(android.content.Context,java.lang.Class)>($r1, class "com/parand/balesen/VoateService")
+	virtualinvoke $r2.<java.io.Writer: java.io.Writer append(char)>(44)
+	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
 	$r6 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>("setMobileDataEnabled", $r4)
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>("\n")
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
+	$i0 = staticinvoke <android.view.View$MeasureSpec: int getMode(int)>($i1)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
+	$r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>()
+	virtualinvoke $r2.<java.io.Writer: void write(java.lang.String)>($r1)
+	staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r3, "Background not created")
+	virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(0)
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	$i3 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i0)
+	virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(0)
 	virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void startActivity(android.content.Intent)>($r1)
 	$r5 = virtualinvoke $r4.<com.parand.a.f: android.database.sqlite.SQLiteDatabase getWritableDatabase()>()
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0)
-	$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
-	$i2 = staticinvoke <android.view.View$MeasureSpec: int getMode(int)>($i0)
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	$r3 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
-	virtualinvoke $r3.<android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>(0)
-	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	virtualinvoke $r2.<android.content.Intent: android.content.Intent setClass(android.content.Context,java.lang.Class)>($r1, class "com/parand/balesen/VoateService")
-	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>(1, $i2)
-	$r4 = virtualinvoke $r3.<android.app.ActivityManager: java.util.List getRunningServices(int)>(2147483647)
-	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
-	virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("text_id", 2131034114)
-	$r5 = virtualinvoke $r4.<android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>(0)
-	$r7 = virtualinvoke $r6.<android.content.ComponentName: java.lang.String getClassName()>()
-	$r3 = virtualinvoke $r5.<java.lang.ThreadLocal: java.lang.Object get()>()
-	virtualinvoke $r3.<java.io.Writer: void write(java.lang.String)>("\"")
-	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
-	$r4 = virtualinvoke $r1.<java.io.ByteArrayOutputStream: byte[] toByteArray()>()
-	$r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>()
-	virtualinvoke $r2.<java.io.Writer: void write(java.lang.String)>("null")
-	$i0 = virtualinvoke $r7.<android.telephony.TelephonyManager: int getNetworkType()>()
-	$i3 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i0)
-	$r3 = virtualinvoke $r2.<java.net.URL: java.net.URLConnection openConnection()>()
-	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
-	virtualinvoke $r3.<java.io.Writer: void write(java.lang.String)>("\"")
-	$r17 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>()
-	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0)
-	$i0 = virtualinvoke $r7.<android.net.wifi.WifiManager: int getWifiState()>()
-	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getWidth()>()
-	$r5 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>("getMobileDataEnabled", null)
-	virtualinvoke $r3.<android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>(1)
-	$r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>()
-	$r4 = staticinvoke <java.lang.reflect.Array: java.lang.Object newInstance(java.lang.Class,int)>($r1, 0)
-	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handTarget")
-	$r21 = virtualinvoke $r7.<java.lang.String: byte[] getBytes(java.lang.String)>("UTF8")
-	$r3 = virtualinvoke $r2.<com.parand.a.f: android.database.sqlite.SQLiteDatabase getWritableDatabase()>()
-	virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(0)
-	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>($r2)
-	$r7 = virtualinvoke $r6.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
-	virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041)
-	$r4 = virtualinvoke $r3.<android.content.res.Resources: java.lang.String getString(int)>(2131034117)
-	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>($r2)
-	virtualinvoke $r5.<java.io.Writer: void write(java.lang.String)>($r1)
+	virtualinvoke $r5.<android.net.NetworkInfo: android.net.NetworkInfo$State getState()>()
 	$r9 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: android.content.Context getContext()>()
+	$r16 = virtualinvoke $r13.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r14, null, $r9, null, null)
+	virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17)
+	$r15 = virtualinvoke $r13.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r14, null, null, null, "display_name COLLATE LOCALIZED ASC")
+	virtualinvoke $r0.<com.elbirras.wificharger.LedTextView: void setTypeface(android.graphics.Typeface)>($r4)
+	$r5 = virtualinvoke $r4.<android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>(0)
+	virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: void setContentView(int)>(2130903040)
+	virtualinvoke $r4.<java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>("GET")
+	virtualinvoke $r3.<android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>(0)
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handTarget", $f0)
+	$i0 = virtualinvoke $r2.<android.content.Intent: int getIntExtra(java.lang.String,int)>("text_id", 0)
+	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getWidth()>()
+	$r4 = virtualinvoke $r1.<java.io.ByteArrayOutputStream: byte[] toByteArray()>()
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	$r3 = virtualinvoke $r2.<com.parand.a.f: android.database.sqlite.SQLiteDatabase getWritableDatabase()>()
+	$r1 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>()
+	$r3 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+	$r5 = staticinvoke <android.text.method.LinkMovementMethod: android.text.method.MovementMethod getInstance()>()
+	$r5 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>("getMobileDataEnabled", null)
+	staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r3)
+	virtualinvoke $r2.<android.app.AlarmManager: void set(int,long,android.app.PendingIntent)>(0, $l0, $r5)
+	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
+	$r2 = virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: android.content.Intent getIntent()>()
+	virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()
+	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getHeight()>()
+	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
+	$r5 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.view.Window getWindow()>()
+	$r8 = virtualinvoke $r5.<android.database.sqlite.SQLiteDatabase: android.database.Cursor rawQuery(java.lang.String,java.lang.String[])>("select ct from tasks where t=? and c=?", $r6)
+	$r4 = virtualinvoke $r1.<java.lang.String: byte[] getBytes()>()
+	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
+	virtualinvoke $r5.<java.lang.ThreadLocal: void set(java.lang.Object)>($r6)
+	$r4 = virtualinvoke $r3.<android.content.res.Resources: java.lang.String getString(int)>(2131034117)
+	$i0 = virtualinvoke $r4.<android.net.wifi.WifiManager: int getWifiState()>()
+	$i1 = virtualinvoke $r4.<java.net.HttpURLConnection: int getResponseCode()>()
+	virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("text_id", 2131034114)
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	$i0 = virtualinvoke $r7.<android.net.wifi.WifiManager: int getWifiState()>()
+	virtualinvoke $r3.<android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>(1)
+	virtualinvoke $r3.<android.graphics.Paint: void setTextAlign(android.graphics.Paint$Align)>($r17)
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handAcceleration", $f0)
+	virtualinvoke $r1.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r3, null, $r4, null, null)
+	$r3 = virtualinvoke $r5.<java.lang.ThreadLocal: java.lang.Object get()>()
+	$r4 = virtualinvoke $r3.<android.app.ActivityManager: java.util.List getRunningServices(int)>(2147483647)
+	$r3 = virtualinvoke $r2.<android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>()
+	virtualinvoke $r1.<android.graphics.Matrix: void setScale(float,float)>($f0, $f1)
+	$r3 = virtualinvoke $r2.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	$r7 = virtualinvoke $r6.<android.content.ComponentName: java.lang.String getClassName()>()
+	$r3 = virtualinvoke $r2.<java.net.URL: java.net.URLConnection openConnection()>()
+	$r7 = virtualinvoke $r1.<java.lang.Class: java.lang.String getName()>()
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handVelocity")
+	$i0 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getWidth()>()
+	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>(1, $i2)
+	virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("handInitialized", $z0)
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	$i2 = staticinvoke <android.view.View$MeasureSpec: int getMode(int)>($i0)
+	virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(8)
+	$i1 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i1)
+	$r9 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: android.content.Context getContext()>()
+	virtualinvoke $r5.<java.io.Writer: void write(java.lang.String)>($r1)
+	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>($r2)
+	$r17 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>()
+	virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("lastHandMoveTime", $l0)
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handTarget")
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handVelocity", $f0)
+	virtualinvoke $r3.<java.io.Writer: void write(java.lang.String)>("\"")
+	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>($r2)
+	$r6 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: java.lang.Object getSystemService(java.lang.String)>("wifi")
+	$r21 = virtualinvoke $r7.<java.lang.String: byte[] getBytes(java.lang.String)>("UTF8")
+	virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r7)
+	virtualinvoke $r1.<java.io.Writer: void write(java.lang.String)>(")]}\'\n")
+	$i0 = virtualinvoke $r7.<android.telephony.TelephonyManager: int getNetworkType()>()
+	$i0 = virtualinvoke $r11.<android.graphics.Bitmap: int getHeight()>()
+	$i1 = virtualinvoke $r0.<com.elbirras.wificharger.LevelDisplay: int getHeight()>()
+	$r3 = virtualinvoke $r0.<com.elbirras.wificharger.MainActivity: android.content.res.Resources getResources()>()
+	virtualinvoke $r5.<android.widget.ImageView: void setVisibility(int)>(8)
+	$r7 = virtualinvoke $r6.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
+	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+	$r4 = staticinvoke <java.lang.reflect.Array: java.lang.Object newInstance(java.lang.Class,int)>($r1, 0)
+	virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("superState", $r2)
+	virtualinvoke $r0.<com.elbirras.wificharger.TopicActivity: void setContentView(int)>(2130903041)
+	$r6 = virtualinvoke $r5.<android.net.NetworkInfo: android.net.NetworkInfo$State getState()>()
+	$f0 = virtualinvoke $r2.<android.os.Bundle: float getFloat(java.lang.String)>("handAcceleration")
+	$l0 = virtualinvoke $r2.<android.os.Bundle: long getLong(java.lang.String)>("lastHandMoveTime")
+	virtualinvoke $r1.<android.os.Bundle: void putFloat(java.lang.String,float)>("handPosition", $f0)
+	$r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r4, 0, $r3, 0)
+	$i0 = virtualinvoke $r3.<android.graphics.Bitmap: int getWidth()>()
+	$r3 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getSubscriberId()>()
 	$r9 = virtualinvoke $r6.<android.telephony.TelephonyManager: java.lang.String getLine1Number()>()

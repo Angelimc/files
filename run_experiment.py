@@ -7,7 +7,7 @@ from pandas.errors import EmptyDataError
 from Utilities import add_to_error_list
 from flowdroid import run_flowdroid
 from multiprocessing import Process
-from mudflow import add_data_to_mudflow_file, parse_result, create_source_sink_map
+from mudflow import add_data_to_mudflow_file, create_source_sink_map
 import pandas as pd
 
 """
@@ -81,9 +81,9 @@ def is_processed(pid, apk):
         for row in reader:
             for i in range(len(row)):
                 if os.path.splitext(os.path.basename(apk))[0] in row[i]:
-                    print('processed')
+                    print('already processed: ' + apk)
                     return True
-        print('not processed')
+        print('processing: ' + apk)
         return False
 
 
@@ -108,7 +108,6 @@ def update_apks_processed(num_workers):
             df = pd.DataFrame()
 
 
-# TODO: check if has no source
 def has_flow(apk):
     output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
     with open(output_path, 'r') as file:
@@ -118,9 +117,13 @@ def has_flow(apk):
     return False
 
 
-def output_file_exists(apk, pid):
+def contains_error(apk, pid):
     output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
     if os.path.exists(output_path):
+        with open(output_path, 'r') as file:
+            contents = file.read()
+            if 'Exception in thread ' in contents:
+                add_to_error_list(apk, pid, 'flowdroid', 'Flowdroid Runtime Error')
         return True
     else:
         add_to_error_list(apk, pid, 'flowdroid', 'flowdroid text file output does not exist: ' + output_path)
@@ -134,22 +137,19 @@ def start_experiment(apks_list_path):
         for apks in apks_list:
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
-                    print(apks[i])
                     run_flowdroid(apks[i])
-                    if not output_file_exists(apks[i], pid):
+                    if not contains_error(apks[i], pid):
                         add_to_processed_apks_list(apks[i], pid)
                         continue
                     contain_flow = has_flow(apks[i])
                     if contain_flow:
                         pass
                         # add_data_to_susi_file(apks[i])
-                    #add_data_to_mudflow_file(apks[i], pid, contain_flow)
+                    add_data_to_mudflow_file(apks[i], pid, contain_flow)
                     add_to_processed_apks_list(apks[i], pid)
 
 
 def main():
-    create_source_sink_map('VirusShare_89d2d4a8cf9509236d020a6ce6246274')
-    """
     num_workers = 1
     #num_workers = int(sys.argv[1])
     create_apks_chunks(num_workers)
@@ -163,7 +163,7 @@ def main():
         p.start()
     for p in procs:
         p.join()
-"""
+
 
 if __name__ =='__main__':
     main()
