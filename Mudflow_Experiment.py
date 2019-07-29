@@ -3,11 +3,10 @@ import shutil
 from pandas import DataFrame
 import concurrent.futures
 
-from ExcelHelper import append_df_to_excel
-from SourcesSinks import appendToFile, copyToFile
-from Flowdroid import runFlowdroid
+from Utilities import append_df_to_excel, copyToFile, appendToFile
+from flowdroid import run_flowdroid
 from Flowdroid20 import runFlowdroid20
-from Flowdroid import runflowdroid
+from flowdroid import runflowdroid
 import glob
 import pandas as pd
 import re
@@ -64,7 +63,7 @@ def createMudflowFile():
                 addSource(result[0])
                 addSink(result[1])
                 # add number of leaks to row
-                numLeaks = runFlowdroid(apk, sourceSinkPath, None, result[0] + result[1])
+                numLeaks = run_flowdroid(apk, sourceSinkPath, None, result[0] + result[1])
                 data.append(numLeaks)
                 print(cols[i] + ': ' + str(numLeaks))
             else:

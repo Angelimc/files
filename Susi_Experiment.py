@@ -2,8 +2,8 @@
 
 import glob
 
-from Flowdroid import runflowdroid
-from Flowdroid import runFlowdroid
+from flowdroid import runflowdroid
+from flowdroid import run_flowdroid
 from Flowdroid20 import runFlowdroid20
 from pandas import DataFrame
 from ExcelHelper import append_df_to_excel
@@ -26,7 +26,7 @@ def createSusiFile():
     for apk in glob.glob(apksPath + '/*.apk'):
         print(apk + ': ')
         for category in sourceCategories:
-            numLeaks = runFlowdroid(apk, sourceSinkPath + category + '.txt', None, os.path.basename(sourceSinkPath))
+            numLeaks = run_flowdroid(apk, sourceSinkPath + category + '.txt', None, os.path.basename(sourceSinkPath))
             if numLeaks > 0:
                 df = DataFrame([os.path.basename(apk), category]).T
                 append_df_to_excel(filename, df, header=None)

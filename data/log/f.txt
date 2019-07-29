@@ -1,0 +1,3 @@
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1927)
+	at soot.jimple.infoflow.android.TestApps.Test.main(Test.java:181)

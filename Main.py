@@ -7,42 +7,15 @@ import pandas as pd
 from pandas import DataFrame
 
 from Utilities import append_df_to_excel, copyToFile, appendToFile
-from Flowdroid import runFlowdroid
+from flowdroid import run_flowdroid
 import csv
 import re
 
-process_num = None
+id = None
 mudflow_dir = ''
 fileWithColumnNames = '/Users/angeli/PycharmProjects/mudflow/data/Column_Names.xlsx'
 count = 0
 filePath = ''
-
-
-def addSource(str):
-    p = re.compile(r'.+\)$')
-    if re.search(p, str):
-        str = '<' + str + '> -> _SOURCE_'
-        with open('SourcesAndSinks.txt', 'w') as f:
-            f.write(str + '\n')
-    else:
-        p2 = re.compile('NO_SENSITIVE_SOURCE')
-        if re.search(p2, str):
-            copyToFile('sourceSinkFiles/NO_SENSITIVE_SOURCE.txt', 'SourcesAndSinks.txt')
-        else:
-            with open('SourcesAndSinks.txt', 'w') as f:
-                f.write('')
-
-
-def addSink(str):
-    p = re.compile(r'.+\)$')
-    if re.search(p, str):
-        str = '<' + str + '> -> _SINK_'
-        with open('SourcesAndSinks.txt', 'a+') as f:
-            f.write(str)
-    else:
-        p2 = re.compile('NO_SENSITIVE_SINK')
-        if re.search(p2, str):
-            appendToFile('sourceSinkFiles/NO_SENSITIVE_SINK.txt', 'SourcesAndSinks.txt')
 
 
 def create_new_file():
@@ -81,7 +54,7 @@ def run_flowdroid_all_columns(apk):
                 addSource(column_name[0])
                 addSink(column_name[1])
                 # add number of leaks to row
-                numLeaks = runFlowdroid(apk, 'SourcesAndSinks.txt')
+                numLeaks = run_flowdroid(apk, 'SourcesAndSinks.txt')
                 data.append(numLeaks)
                 print(cols[i] + ': ' + str(numLeaks))
             else:
@@ -96,10 +69,10 @@ def process_apk(apk):
     with open(mudflow_dir + 'apks_processed.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
-            if apk in row:
+            if os.path.splitext(os.path.basename(apk))[0] in row:
                 return
 
-    # create new excel sheet until it reaches
+    # create new excel sheet if it reaches max num of rows
     if count == 0:
         create_new_file()
     if count >= 2: # TODO: Change to 99 later
@@ -108,6 +81,7 @@ def process_apk(apk):
     run_flowdroid_all_columns(apk)
     count = count + 1
 
+    # add apk to apks_processed file
     with open(mudflow_dir + 'apks_processed.csv', 'a') as file:
         writer = csv.writer(file, delimiter=',')
         writer.writerow([apk])
@@ -115,16 +89,15 @@ def process_apk(apk):
 
 def create_mudflow_file(apks_csv_path):
     global mudflow_dir
-    process_num = os.path.splitext(apks_csv_path)[0][-1:]
-    mudflow_dir = 'data/mudflow/process_' + process_num + '/'
+    # create a directory for each process
+    id = os.path.splitext(apks_csv_path)[0][-1:]
+    mudflow_dir = 'data/mudflow/process_' + id + '/'
     if not os.path.exists(mudflow_dir):
         os.mkdir(mudflow_dir)
 
     if not os.path.exists(mudflow_dir + 'apks_processed.csv'):
         with open(mudflow_dir + 'apks_processed.csv', 'w') as f1:
             pass
-
-    df = pd.read_table(apks_csv_path, sep=" ", header=None)
 
     with open(apks_csv_path, 'r') as f:
         mycsv = csv.reader(f, delimiter=',')
