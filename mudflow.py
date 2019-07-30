@@ -6,20 +6,18 @@ import uuid
 import pandas as pd
 from pandas import DataFrame
 
-from Utilities import append_df_to_excel, copyToFile, appendToFile, add_to_error_list
-from flowdroid import run_flowdroid
-import csv
+from utilities import append_df_to_excel, copyToFile, appendToFile, add_to_error_list
 import re
 
-count = 0
-filePath = ''
+mudflow_count_apks = 0
+mudflow_file_path = ''
 
 
 def create_new_file(pid):
-    global filePath
+    global mudflow_file_path
     unique_id = str(uuid.uuid4().hex)
-    filePath = 'data/mudflow/process_' + str(pid) + '/' + str(uuid.uuid4().hex) + '.xlsx'
-    shutil.copy('data/Column_Names.xlsx', filePath)
+    mudflow_file_path = 'data/mudflow/process_' + str(pid) + '/' + str(uuid.uuid4().hex) + '.xlsx'
+    shutil.copy('data/Column_Names.xlsx', mudflow_file_path)
 
 
 #   Add triangular brackets to match flowdroid formatting when it logs flows
@@ -50,7 +48,7 @@ def calc_num_flows(apk, column_name):
 
 
 def update_row_data(apk, pid, has_flow):
-    columns = pd.read_excel(filePath, sheet_name='Sheet1').columns
+    columns = pd.read_excel(mudflow_file_path, sheet_name='Sheet1').columns
     data = []
     for i in range(len(columns)):
         if i == 0:
@@ -77,17 +75,17 @@ def update_row_data(apk, pid, has_flow):
             data.append(calc_num_flows(apk, columns[i]))
 
     df = DataFrame(data).T
-    append_df_to_excel(filePath, df, header=None)
+    append_df_to_excel(mudflow_file_path, df, header=None)
 
 
 def add_data_to_mudflow_file(apk, pid, has_flow):
-    global count
-    global filePath
-    # create new excel sheet if count = 0 or max number of rows
-    if count == 0:
+    global mudflow_count_apks
+    global mudflow_file_path
+    # create new excel sheet if count is equal to 0 or max number of rows
+    if mudflow_count_apks == 0:
         create_new_file(pid)
-    if count >= 5:  # TODO: Change to 99 later
-        count = 0
+    if mudflow_count_apks >= 5:  # TODO: Change to 99 later
+        mudflow_count_apks = 0
         create_new_file(pid)
     update_row_data(apk, pid, has_flow)
-    count += 1
+    mudflow_count_apks += 1

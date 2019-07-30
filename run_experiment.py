@@ -4,7 +4,7 @@ import os
 
 from pandas.errors import EmptyDataError
 
-from Utilities import add_to_error_list
+from utilities import add_to_error_list
 from flowdroid import run_flowdroid
 from multiprocessing import Process
 from mudflow import add_data_to_mudflow_file
@@ -136,14 +136,16 @@ def start_experiment(apks_list_path):
                     contain_flow = has_flow(apks[i])
                     if contain_flow:
                         pass
-                        add_data_to_susi_file(apks[i])
-                    add_data_to_mudflow_file(apks[i], pid, contain_flow)
+                        add_data_to_susi_file(apks[i], pid)
+                    #add_data_to_mudflow_file(apks[i], pid, contain_flow)
                     #add_to_processed_apks_list(apks[i], pid)
 
 
+#   Runs flowdroid on all apks and creates the susi and mudflow excel sheets using given number of processes
+#   @param: number of processes to run
 def main():
     num_workers = 1
-    #num_workers = int(sys.argv[1])
+    #num_workers = int(sys.argv[1]) #TODO: remove later
     create_apks_chunks(num_workers)
     update_apks_processed(num_workers)
     procs = []

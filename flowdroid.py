@@ -3,17 +3,17 @@
 import subprocess, sys
 import re
 import os
-from Utilities import copyToFile
+from utilities import copyToFile
 
 # TODO: change directory
 androidJar = '/Users/angeli/Library/Android/sdk/platforms'
 
 def run_flowdroid(apkPath):
 
-    #TODO: add --TIMEOUT
-    # run mudflow's version of flowdroid (added layoutmode none to their script)
+    #TODO: check --TIMEOUT
+    # run mudflow's version of flowdroid (added layoutmode none and fixed nopath to nopaths to their script)
     config = ['--logsourcesandsinks', '--pathalgo', 'sourcesonly', '--nopaths', '--aliasflowins', '--nostatic',
-              '--aplength', '3', '--layoutmode', 'none']
+              '--aplength', '3', '--layoutmode', 'none', '--timeout', '43200']
     cmd = ['java', '-Xmx300g', '-jar', 'flowdroid.jar',  apkPath, androidJar] + list(config)
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     sys.stdout.flush()
