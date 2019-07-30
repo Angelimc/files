@@ -12,7 +12,7 @@ susi_categories = ['HARDWARE_INFO', 'UNIQUE_IDENTIFIER', 'LOCATION_INFORMATION',
                     'NO_SENSITIVE_SOURCE', 'CONTENT_RESOLVER']
 susi_count_apks = 0
 susi_file_path = ''
-
+#TODO: add platform jars
 
 def create_new_file_path(pid):
     global susi_file_path
@@ -45,7 +45,6 @@ def process_apk(apk):
                             apk_categories.append(susi_category)
                             duplicate_apk_names.append(os.path.basename(apk))
     df = DataFrame({'A': duplicate_apk_names, 'B': apk_categories})
-    print('appended to excel' + str(df.shape[0]))
     append_df_to_excel(susi_file_path, df, header=None)
 
 

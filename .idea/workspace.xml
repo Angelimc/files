@@ -2,23 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2b43ee6-714e-467d-92ed-6a638fa8302a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/init_source_sink_files.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourcesAndSinks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourcesAndSinks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_out_VirusShare_89d2d4a8cf9509236d020a6ce6246274.apk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_out_VirusShare_9ffc50dd20f69b6114a468d6e155432c.apk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_out_VirusShare_f1f04fc7fd20cbf6cd6f8cde97146b48.apk.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Column_Names.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Column_Names.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/susi/process_0/280ae23b79074d678d4f9f0b44ba6c18.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/susi/process_0/51ee0a49a93644ef89bd283b40567c07.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/susi/process_0/9cc46ae4534b4886a87b8b15d3c4890f.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/susi/process_0/f0ffd5a94f02416ba029983f06efc450.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_6c6e372d1a4442991c704be73bdb5024.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_89d2d4a8cf9509236d020a6ce6246274.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_9ffc50dd20f69b6114a468d6e155432c.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_ea3597aad914e0c5082bc0c0b7451bda.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_f1f04fc7fd20cbf6cd6f8cde97146b48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_fdd9edf3569a4ae039fc7fe82a1ffc43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/17d01f98379e42a194f9627cc612173c.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/334ae85ca719466cb76dd8b902700263.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/7c7f662a5394435c8747fd3d2b5c4654.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/885eb07c7c254df498bb26f5661069df.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/9224d460a1b34d47be93be6d564966fd.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/ad065f4af7d74cf8bbf2e06b8a69e1e9.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/baf0cc451be54289b3adfdeea79c0c13.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mudflow/process_0/d8d99993647e4d22aa004c1b2bab0282.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/progress/apks_processed_0.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flowdroid.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowdroid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mudflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/mudflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16_results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/VirusShare_6c6e372d1a4442991c704be73bdb5024_results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/VirusShare_9ffc50dd20f69b6114a468d6e155432c_results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/VirusShare_a9e32a7cc08cefda83a9dd636ee42a16_results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/VirusShare_ea3597aad914e0c5082bc0c0b7451bda_results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/VirusShare_f1f04fc7fd20cbf6cd6f8cde97146b48_results.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources_sinks_categories/no_sensitive_source.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sources_sinks_categories/NO_SENSITIVE_SOURCE.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/susi.py" beforeDir="false" afterPath="$PROJECT_DIR$/susi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +52,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sources_sinks_categories" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -53,11 +65,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/sources_sinks_categories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/sources_sinks_categories" />
     </key>
   </component>

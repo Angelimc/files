@@ -127,7 +127,7 @@ def start_experiment(apks_list_path):
         for apks in apks_list:
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
-                    #run_flowdroid(apks[i])
+                    run_flowdroid(apks[i])
                     if contains_error(apks[i], pid):
                         add_to_processed_apks_list(apks[i], pid)
                         continue
