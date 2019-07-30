@@ -1,0 +1,8 @@
+<android.content.ContentResolver: android.database.Cursor query(android.provider.Telephony$Carriers: android.net.Uri CONTENT_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+<android.content.ContentResolver: android.database.Cursor query(com.android.email.provider.AttachmentProvider: android.net.Uri CONTENT_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+<android.content.ContentResolver: android.database.Cursor query(com.android.email.provider.EmailContent: android.net.Uri CONTENT_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+<android.content.ContentResolver: android.database.Cursor query(com.android.email.provider.EmailProvider: android.net.Uri INTEGRITY_CHECK_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+<android.content.ContentResolver: android.database.Cursor query(com.android.exchange.provider.ExchangeProvider: android.net.Uri GAL_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+<android.content.ContentResolver: android.database.Cursor query(com.android.internal.telephony.gsm.GsmDataConnectionTracker: android.net.Uri PREFERAPN_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+<android.content.ContentResolver: android.database.Cursor query(com.android.settings.ApnSettings: android.net.Uri DEFAULTAPN_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>
+<android.content.ContentResolver: android.database.Cursor query(com.android.settings.ApnSettings: android.net.Uri PREFERAPN_URI,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>

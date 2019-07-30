@@ -12,6 +12,8 @@ import pandas as pd
 
 
 #TODO: change directories
+from susi import add_data_to_susi_file
+
 apk_files_dir = '/Users/angeli/My_Documents/Mudflow/DataTest/'
 apk_list_csv_dir = '/Users/angeli/My_Documents/Mudflow/'
 
@@ -134,7 +136,7 @@ def start_experiment(apks_list_path):
                     contain_flow = has_flow(apks[i])
                     if contain_flow:
                         pass
-                        # add_data_to_susi_file(apks[i])
+                        add_data_to_susi_file(apks[i])
                     add_data_to_mudflow_file(apks[i], pid, contain_flow)
                     #add_to_processed_apks_list(apks[i], pid)
 

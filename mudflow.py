@@ -22,33 +22,6 @@ def create_new_file(pid):
     shutil.copy('data/Column_Names.xlsx', filePath)
 
 
-def calc_sensitive_flows(sink_map, source_map, column_source, column_sink):
-    count_flow = 0
-    if column_source == 'NO_SENSITIVE_SOURCE':
-        print('NO_SENSITIVE_SOURCE')
-        # get all the sources that lead to the given sink
-        parsed_sources = sink_map.get(column_sink)
-        if parsed_sources:
-            for parsed_source in parsed_sources:
-                print('parsed source ' + parsed_source)
-                with open('sources_sinks_categories/no_sensitive_source.txt', 'r') as file:
-                    list_not_sensitive_source = file.read()
-                    if parsed_source in list_not_sensitive_source:
-                        count_flow += 1
-        return int(count_flow)
-    elif column_sink == 'NO_SENSITIVE_SINK':
-        print('NO_SENSITIVE_SINK')
-        parsed_sinks = source_map.get(column_source)
-        if parsed_sinks:
-            for parsed_sink in parsed_sinks:
-                with open('sources_sinks_categories/no_sensitive_sink.txt', 'r') as file:
-                    list_not_sensitive_sink = file.read()
-                    if parsed_sink in list_not_sensitive_sink:
-                        count_flow += 1
-    print(column_source + ' -> ' + column_sink + 'has ' + str(count_flow))
-    return int(count_flow)
-
-
 #   Add triangular brackets to match flowdroid formatting when it logs flows
 def process_column_name(column_name):
     flow = [x.strip() for x in column_name.split('->')]
@@ -73,27 +46,7 @@ def calc_num_flows(apk, column_name):
             if flow in line:
                 count_flows += 1
                 print('has flow: ' + flow)
-
-
-    """
-    column_name = [x.strip() for x in flow.split('->')]
-    count_flow = 0
-    print(str(len(column_name)))
-    if column_name and len(column_name) == 2:
-        source = column_name[0]
-        sink = column_name[1]
-        if source == 'NO_SENSITIVE_SOURCE' or sink == 'NO_SENSITIVE_SINK':
-            return calc_sensitive_flows(sink_map, source_map, source, sink)
-        sources = sink_map.get(sink)
-        if sources:
-            for s in sources:
-                if s == source:
-                    print('source ' + s)
-                    count_flow += 1
-                    print('count: ' + str(count_flow))
-    print(flow + ' has: ' + str(count_flow))
-    return int(count_flow)
-    """
+    return int(count_flows)
 
 
 def update_row_data(apk, pid, has_flow):
@@ -127,77 +80,9 @@ def update_row_data(apk, pid, has_flow):
     append_df_to_excel(filePath, df, header=None)
 
 
-def contains_sink(line):
-    return 'was called with values from the following sources' in line
-
-
-def contains_source(line):
-    return ' - - ' in line
-
-
-def parse_sink(line):
-    p = r'(?<=The sink ).+(?= in method )'
-    s1 = re.findall(p, line)[0]
-    s2 = s1.split('<')[1]
-    s3 = s2.split('>')[0]
-    return '<' + s3 + '>'
-
-
-def parse_source(line):
-    p = r'(?<= - - ).+(?= in method )'
-    s1 = re.findall(p, line)[0]
-    s2 = s1.split('<')[1]
-    s3 = s2.split('>')[0]
-    return '<' + s3 + '>'
-
-
-def update_sink_map(sink_map, sink, sources):
-    if sink in sink_map:
-        sink_map[sink] = sink_map[sink] + sources
-    else:
-        sink_map[sink] = sources
-
-
-def update_source_map(source_map, sink, sources):
-    for s in sources:
-        if s in source_map:
-            source_map[s].append(sink)
-        else:
-            source_map[s] = [sink]
-
-""""
-def create_source_sink_map(apk):
-    output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
-    sink_map = {}
-    source_map = {}
-    sink = ''
-    sources = []
-    collecting_sources = False
-    with open(output_path, 'r') as f:
-        lines = f.read().splitlines()
-        for line in lines:
-            if contains_sink(line):
-                if collecting_sources:
-                    update_sink_map(sink_map, sink, sources)
-                    update_source_map(source_map, sink, sources)
-                    sources = []
-                sink = parse_sink(line)
-                collecting_sources = True
-            elif contains_source(line) and collecting_sources:
-                sources.append(parse_source(line))
-            elif collecting_sources:
-                update_sink_map(sink_map, sink, sources)
-                update_source_map(source_map, sink, sources)
-                sources = []
-                sink = ''
-                collecting_sources = False
-    return sink_map, source_map
-"""
-
 def add_data_to_mudflow_file(apk, pid, has_flow):
     global count
     global filePath
-    #sink_map, source_map = create_source_sink_map(apk)
     # create new excel sheet if count = 0 or max number of rows
     if count == 0:
         create_new_file(pid)
