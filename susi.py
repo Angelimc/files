@@ -5,7 +5,7 @@ from pandas import DataFrame
 
 from utilities import append_df_to_excel
 
-sourceCategories = ['HARDWARE_INFO', 'UNIQUE_IDENTIFIER', 'LOCATION_INFORMATION', 'NETWORK_INFORMATION',
+susi_categories = ['HARDWARE_INFO', 'UNIQUE_IDENTIFIER', 'LOCATION_INFORMATION', 'NETWORK_INFORMATION',
                     'ACCOUNT_INFORMATION', 'EMAIL', 'FILE_INFORMATION', 'BLUETOOTH_INFORMATION', 'VOIP',
                     'DATABASE_INFORMATION', 'PHONE_INFORMATION', 'AUDIO', 'SMS_MMS', 'CONTACT_INFORMATION',
                     'CALENDAR_INFORMATION', 'SYSTEM_SETTINGS', 'IMAGE', 'BROWSER_INFORMATION', 'NFC',
@@ -26,11 +26,12 @@ def parse_source(line):
 
 
 def process_apk(apk):
+    global susi_categories
     global susi_file_path
-    susi_categories = []
+    apk_categories = []
     duplicate_apk_names = []
-    for category in sourceCategories:
-        if category not in susi_categories:
+    for susi_category in susi_categories:
+        if susi_category not in apk_categories:
             output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
             with open(output_path, 'r') as f:
                 lines = f.read().splitlines()
@@ -38,12 +39,13 @@ def process_apk(apk):
                     if ' -> ' not in line:
                         continue
                     source = parse_source(line)
-                    with open('sources_sinks_categories/' + category + '.txt', 'r') as file:
+                    with open('sources_sinks_categories/' + susi_category + '.txt', 'r') as file:
                         contents = file.read()
-                        if source not in susi_categories and source in contents:
-                            susi_categories.append(source)
+                        if susi_category not in apk_categories and source in contents:
+                            apk_categories.append(susi_category)
                             duplicate_apk_names.append(os.path.basename(apk))
-    df = DataFrame({'A': duplicate_apk_names, 'B': susi_categories})
+    df = DataFrame({'A': duplicate_apk_names, 'B': apk_categories})
+    print('appended to excel' + str(df.shape[0]))
     append_df_to_excel(susi_file_path, df, header=None)
 
 
@@ -57,6 +59,6 @@ def add_data_to_susi_file(apk, pid):
         susi_count_apks = 0
         create_new_file_path(pid)
     process_apk(apk)
-    susi_count_apks +=1
+    susi_count_apks += 1
 
 

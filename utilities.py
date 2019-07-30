@@ -70,7 +70,7 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
     writer.save()
 
 
-def copyToFile(input, output):
+def copy_to_file(input, output):
     with open(input) as f1:
         with open(output, 'w') as f2:
             for line in f1:
@@ -78,7 +78,7 @@ def copyToFile(input, output):
             f2.write('\n')
 
 
-def appendToFile(input, output):
+def append_to_file(input, output):
     with open(input) as f1:
         with open(output, 'a+') as f2:
             for line in f1:

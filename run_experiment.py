@@ -3,17 +3,14 @@ import glob
 import os
 
 from pandas.errors import EmptyDataError
-
 from utilities import add_to_error_list
 from flowdroid import run_flowdroid
 from multiprocessing import Process
 from mudflow import add_data_to_mudflow_file
 import pandas as pd
-
-
-#TODO: change directories
 from susi import add_data_to_susi_file
 
+#TODO: change directories
 apk_files_dir = '/Users/angeli/My_Documents/Mudflow/DataTest/'
 apk_list_csv_dir = '/Users/angeli/My_Documents/Mudflow/'
 
@@ -81,6 +78,7 @@ def add_to_processed_apks_list(apk, id):
     with open('data/progress/apks_processed_' + id + '.csv', 'a') as file:
         writer = csv.writer(file, delimiter=',')
         writer.writerow([apk])
+    print('Completed processing: ' + apk)
 
 
 def update_apks_processed(num_workers):
@@ -129,7 +127,7 @@ def start_experiment(apks_list_path):
         for apks in apks_list:
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
-                    # run_flowdroid(apks[i])
+                    #run_flowdroid(apks[i])
                     if contains_error(apks[i], pid):
                         add_to_processed_apks_list(apks[i], pid)
                         continue
@@ -137,8 +135,8 @@ def start_experiment(apks_list_path):
                     if contain_flow:
                         pass
                         add_data_to_susi_file(apks[i], pid)
-                    #add_data_to_mudflow_file(apks[i], pid, contain_flow)
-                    #add_to_processed_apks_list(apks[i], pid)
+                    add_data_to_mudflow_file(apks[i], pid, contain_flow)
+                    add_to_processed_apks_list(apks[i], pid)
 
 
 #   Runs flowdroid on all apks and creates the susi and mudflow excel sheets using given number of processes

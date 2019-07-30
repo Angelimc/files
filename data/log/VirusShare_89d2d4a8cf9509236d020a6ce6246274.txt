@@ -1,0 +1,494 @@
+Running infoflow task...
+[pool-1-thread-1] INFO soot.jimple.infoflow.taintWrappers.EasyTaintWrapper - Loaded wrapper entries for 70 classes and 11 exclusions.
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.021625919 seconds
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Context
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Intent
+[pool-1-thread-1] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.security.service.MainActivity $r1;
+        com.security.service.receiver.ActionReceiver $r2;
+        com.security.service.receiver.SmsReceiver $r3;
+        com.security.service.receiver.RebootReceiver $r4;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label3;
+
+        $r1 = new com.security.service.MainActivity;
+
+        specialinvoke $r1.<com.security.service.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label3;
+
+        virtualinvoke $r1.<com.security.service.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+     label2:
+        if $i0 == 4 goto label3;
+
+        if $i0 == 5 goto label2;
+
+     label3:
+        if $i0 == 7 goto label5;
+
+        $r2 = new com.security.service.receiver.ActionReceiver;
+
+        specialinvoke $r2.<com.security.service.receiver.ActionReceiver: void <init>()>();
+
+        if $i0 == 8 goto label5;
+
+     label4:
+        virtualinvoke $r2.<com.security.service.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 10 goto label4;
+
+     label5:
+        if $i0 == 11 goto label7;
+
+        $r3 = new com.security.service.receiver.SmsReceiver;
+
+        specialinvoke $r3.<com.security.service.receiver.SmsReceiver: void <init>()>();
+
+        if $i0 == 12 goto label7;
+
+     label6:
+        virtualinvoke $r3.<com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 14 goto label6;
+
+     label7:
+        if $i0 == 15 goto label9;
+
+        $r4 = new com.security.service.receiver.RebootReceiver;
+
+        specialinvoke $r4.<com.security.service.receiver.RebootReceiver: void <init>()>();
+
+        if $i0 == 16 goto label9;
+
+     label8:
+        virtualinvoke $r4.<com.security.service.receiver.RebootReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 18 goto label8;
+
+     label9:
+        if $i0 == 19 goto label1;
+
+        return;
+    }
+
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Collecting callbacks in DEFAULT mode...
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.3 seconds.
+[Spark] Solution found in 0.3 seconds.
+Callback analysis done.
+Warning: RelativeLayout is a phantom class!
+Warning: com.security.service.RelativeLayout is a phantom class!
+Warning: android.view.RelativeLayout is a phantom class!
+Warning: TextView is a phantom class!
+Warning: com.security.service.TextView is a phantom class!
+Warning: android.view.TextView is a phantom class!
+Found 1 layout controls in file res/layout/activity_main.xml
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.DialogInterface
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.view.Menu
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Context
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Intent
+[pool-1-thread-1] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.security.service.MainActivity $r1;
+        com.security.service.MainActivity$1 $r2;
+        boolean $z0;
+        com.security.service.receiver.ActionReceiver $r3;
+        com.security.service.receiver.SmsReceiver $r4;
+        com.security.service.receiver.RebootReceiver $r5;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label01:
+        if $i0 == 0 goto label07;
+
+        $r1 = new com.security.service.MainActivity;
+
+        specialinvoke $r1.<com.security.service.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label07;
+
+        virtualinvoke $r1.<com.security.service.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+     label02:
+        if $i0 == 3 goto label06;
+
+     label03:
+        $r2 = new com.security.service.MainActivity$1;
+
+        specialinvoke $r2.<com.security.service.MainActivity$1: void <init>(com.security.service.MainActivity)>($r1);
+
+        if $i0 == 4 goto label04;
+
+        virtualinvoke $r2.<com.security.service.MainActivity$1: void onClick(android.content.DialogInterface,int)>(null, 0);
+
+     label04:
+        if $i0 == 5 goto label05;
+
+        $z0 = virtualinvoke $r1.<com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>(null);
+
+     label05:
+        if $i0 == 6 goto label03;
+
+     label06:
+        if $i0 == 7 goto label02;
+
+        if $i0 == 8 goto label07;
+
+        if $i0 == 9 goto label02;
+
+     label07:
+        if $i0 == 11 goto label09;
+
+        $r3 = new com.security.service.receiver.ActionReceiver;
+
+        specialinvoke $r3.<com.security.service.receiver.ActionReceiver: void <init>()>();
+
+        if $i0 == 12 goto label09;
+
+     label08:
+        virtualinvoke $r3.<com.security.service.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 14 goto label08;
+
+     label09:
+        if $i0 == 15 goto label11;
+
+        $r4 = new com.security.service.receiver.SmsReceiver;
+
+        specialinvoke $r4.<com.security.service.receiver.SmsReceiver: void <init>()>();
+
+        if $i0 == 16 goto label11;
+
+     label10:
+        virtualinvoke $r4.<com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 18 goto label10;
+
+     label11:
+        if $i0 == 19 goto label13;
+
+        $r5 = new com.security.service.receiver.RebootReceiver;
+
+        specialinvoke $r5.<com.security.service.receiver.RebootReceiver: void <init>()>();
+
+        if $i0 == 20 goto label13;
+
+     label12:
+        virtualinvoke $r5.<com.security.service.receiver.RebootReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 22 goto label12;
+
+     label13:
+        if $i0 == 23 goto label01;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
+[Spark] Solution found in 0.1 seconds.
+Running incremental callback analysis for 4 components...
+Incremental callback analysis done.
+Found 6 callback methods for 4 components
+Found {res/layout/activity_main.xml=[-1 - android.widget.TextView, -1 - android.widget.RelativeLayout]} layout controls
+Entry point calculation done.
+Created a SourceSinkManager with 26473 sources, 26457 sinks, and 6 callback methods.
+Running data flow analysis...
+Running data flow analysis on /Users/angeli/My_Documents/Mudflow/DataTest/malware/2013/VirusShare_89d2d4a8cf9509236d020a6ce6246274.apk with 26473 sources and 26457 sinks...
+Starting infoflow computation...
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Resetting Soot...
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Basic class loading done.
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.os.Bundle
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.DialogInterface
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.view.Menu
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Context
+[pool-1-thread-1] WARN soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class android.content.Intent
+[pool-1-thread-1] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        java.lang.String[] $r0;
+        int $i0;
+        com.security.service.MainActivity $r1;
+        com.security.service.MainActivity$1 $r2;
+        boolean $z0;
+        com.security.service.receiver.ActionReceiver $r3;
+        com.security.service.receiver.SmsReceiver $r4;
+        com.security.service.receiver.RebootReceiver $r5;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label01:
+        if $i0 == 0 goto label07;
+
+        $r1 = new com.security.service.MainActivity;
+
+        specialinvoke $r1.<com.security.service.MainActivity: void <init>()>();
+
+        if $i0 == 1 goto label07;
+
+        virtualinvoke $r1.<com.security.service.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+     label02:
+        if $i0 == 3 goto label06;
+
+     label03:
+        $r2 = new com.security.service.MainActivity$1;
+
+        specialinvoke $r2.<com.security.service.MainActivity$1: void <init>(com.security.service.MainActivity)>($r1);
+
+        if $i0 == 4 goto label04;
+
+        virtualinvoke $r2.<com.security.service.MainActivity$1: void onClick(android.content.DialogInterface,int)>(null, 0);
+
+     label04:
+        if $i0 == 5 goto label05;
+
+        $z0 = virtualinvoke $r1.<com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>(null);
+
+     label05:
+        if $i0 == 6 goto label03;
+
+     label06:
+        if $i0 == 7 goto label02;
+
+        if $i0 == 8 goto label07;
+
+        if $i0 == 9 goto label02;
+
+     label07:
+        if $i0 == 11 goto label09;
+
+        $r3 = new com.security.service.receiver.ActionReceiver;
+
+        specialinvoke $r3.<com.security.service.receiver.ActionReceiver: void <init>()>();
+
+        if $i0 == 12 goto label09;
+
+     label08:
+        virtualinvoke $r3.<com.security.service.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 14 goto label08;
+
+     label09:
+        if $i0 == 15 goto label11;
+
+        $r4 = new com.security.service.receiver.SmsReceiver;
+
+        specialinvoke $r4.<com.security.service.receiver.SmsReceiver: void <init>()>();
+
+        if $i0 == 16 goto label11;
+
+     label10:
+        virtualinvoke $r4.<com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 18 goto label10;
+
+     label11:
+        if $i0 == 19 goto label13;
+
+        $r5 = new com.security.service.receiver.RebootReceiver;
+
+        specialinvoke $r5.<com.security.service.receiver.RebootReceiver: void <init>()>();
+
+        if $i0 == 20 goto label13;
+
+     label12:
+        virtualinvoke $r5.<com.security.service.receiver.RebootReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null);
+
+        if $i0 == 22 goto label12;
+
+     label13:
+        if $i0 == 23 goto label01;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
+[Spark] Solution found in 0.1 seconds.
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Callgraph construction took 0.127132961 seconds
+[pool-1-thread-1] INFO soot.jimple.infoflow.codeOptimization.InterproceduralConstantValuePropagator - Removing side-effect free methods is disabled
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Dead code elimination took 0.030749171 seconds
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Callgraph has 120 edges
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Starting Taint Analysis
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.FlowDroidMemoryManager - Initializing FlowDroid memory manager...
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.FlowDroidMemoryManager - FDMM: Path data erasure enabled
+[pool-1-thread-1] WARN soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Static field tracking is disabled, results may be incomplete
+[pool-1-thread-1] WARN soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Using flow-insensitive alias tracking, results may be imprecise
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Implicit flow tracking is NOT enabled
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Exceptional flow tracking is enabled
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Running with a maximum access path length of 3
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Using path-agnostic result collection
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Recursive access path shortening is enabled
+[pool-1-thread-1] INFO soot.jimple.infoflow.android.InfoflowAndroidConfiguration - Taint analysis enabled: true
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Looking for sources and sinks...
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Source lookup done, found 20 sources and 23 sinks.
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Taint wrapper hits: 1
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - Taint wrapper misses: 172
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - IFDS problem with 1157 forward and 176 backward edges solved, processing 15 results...
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Obtainted 15 connections between sources and sinks
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 1 with task id 0
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 2 with task id 1
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 3 with task id 2
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 4 with task id 3
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 5 with task id 4
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 6 with task id 5
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 7 with task id 6
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 8 with task id 7
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 9 with task id 8
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 10 with task id 9
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 11 with task id 10
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 12 with task id 11
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 13 with task id 12
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 14 with task id 13
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Building path 15 with task id 14
+[pool-1-thread-1] INFO soot.jimple.infoflow.data.pathBuilders.ContextInsensitiveSourceFinder - Path processing took 0.005237975 seconds in total
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>($i2, $i3) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink $z0 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("set admin") in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink $r7 = virtualinvoke $r6.<android.os.Bundle: java.lang.Object get(java.lang.String)>("pdus") in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r6 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink virtualinvoke $r6.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r1, $r4, $r5) in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0) in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r6 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>() in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r4 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0) in method <com.security.service.receiver.SmsReceiver: void processSend(java.lang.String,java.lang.String,android.content.Context)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r11 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getOriginatingAddress()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink $r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r7 = virtualinvoke $r6.<android.os.Bundle: java.lang.Object get(java.lang.String)>("pdus") in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink $r11 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getOriginatingAddress()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink $r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>() in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - $r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9) in method <com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - The sink $r2 = virtualinvoke $r0.<com.security.service.MainActivity: android.view.MenuInflater getMenuInflater()>() in method <com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)> was called with values from the following sources:
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+[pool-1-thread-1] INFO soot.jimple.infoflow.Infoflow - - specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1) in method <com.security.service.MainActivity: void onCreate(android.os.Bundle)>
+<android.telephony.SmsMessage: java.lang.String getMessageBody()> -> <java.lang.String: java.lang.String substring(int,int)>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void setContentView(int)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void setContentView(int)>
+<android.telephony.SmsMessage: java.lang.String getMessageBody()> -> <java.lang.String: boolean startsWith(java.lang.String)>
+<android.content.Intent: android.os.Bundle getExtras()> -> <android.os.Bundle: java.lang.Object get(java.lang.String)>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: void onCreate(android.os.Bundle)>
+<android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
+<android.telephony.SmsManager: android.telephony.SmsManager getDefault()> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
+<android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
+<android.telephony.SmsMessage: java.lang.String getOriginatingAddress()> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
+<android.telephony.SmsMessage: java.lang.String getMessageBody()> -> <android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>
+<android.os.Bundle: java.lang.Object get(java.lang.String)> -> <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>
+<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> <android.telephony.SmsMessage: java.lang.String getOriginatingAddress()>
+<android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])> -> <android.telephony.SmsMessage: java.lang.String getMessageBody()>
+<android.app.Activity: void setContentView(int)> -> <android.app.Activity: android.view.MenuInflater getMenuInflater()>
+<android.app.Activity: void onCreate(android.os.Bundle)> -> <android.app.Activity: android.view.MenuInflater getMenuInflater()>
+<android.content.Intent: java.lang.String getAction()> -> NO_SENSITIVE_SINK
+<android.content.Intent: java.lang.String getAction()> -> NO_SENSITIVE_SINK
+<java.lang.String: boolean startsWith(java.lang.String)> -> NO_SENSITIVE_SINK
+<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)> -> NO_SENSITIVE_SINK
+<android.app.Activity: android.view.MenuInflater getMenuInflater()> -> NO_SENSITIVE_SINK
+<java.lang.String: java.lang.String substring(int,int)> -> NO_SENSITIVE_SINK
+<android.content.Intent: java.lang.String getAction()> -> NO_SENSITIVE_SINK
+<android.content.Intent: java.lang.String getAction()> -> NO_SENSITIVE_SINK
+<java.lang.Class: java.lang.String getCanonicalName()> -> NO_SENSITIVE_SINK
+<android.content.Intent: java.lang.String getAction()> -> NO_SENSITIVE_SINK
+NO_SENSITIVE_SOURCE -> <android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setTitle(int)>
+NO_SENSITIVE_SOURCE -> <android.app.AlertDialog$Builder: android.app.AlertDialog show()>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: android.os.Bundle getExtras()>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: java.lang.String getAction()>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: java.lang.String getAction()>
+NO_SENSITIVE_SOURCE -> <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>
+NO_SENSITIVE_SOURCE -> <android.util.Log: int e(java.lang.String,java.lang.String)>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: java.lang.String getAction()>
+NO_SENSITIVE_SOURCE -> <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: java.lang.String getAction()>
+NO_SENSITIVE_SOURCE -> <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>
+NO_SENSITIVE_SOURCE -> <java.lang.Class: java.lang.String getCanonicalName()>
+NO_SENSITIVE_SOURCE -> <android.content.Intent: java.lang.String getAction()>
+Found 40 results
+Maximum memory consumption: 240.629064 MB
+Analysis has run for 9.315000195 seconds
+Collected sources:
+	$r7 = virtualinvoke $r6.<android.os.Bundle: java.lang.Object get(java.lang.String)>("pdus")
+	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+	$r6 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>()
+	$r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9)
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$r11 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getOriginatingAddress()>()
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$z0 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("set admin")
+	virtualinvoke $r6.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r1, $r4, $r5)
+	$r2 = virtualinvoke $r0.<com.security.service.MainActivity: android.view.MenuInflater getMenuInflater()>()
+	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>($i2, $i3)
+	$r4 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0)
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0)
+	$r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>()
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$r6 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>()
+	$r5 = virtualinvoke $r4.<java.lang.Class: java.lang.String getCanonicalName()>()
+	virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040)
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+Collected sinks:
+	$r7 = virtualinvoke $r6.<android.os.Bundle: java.lang.Object get(java.lang.String)>("pdus")
+	specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1)
+	virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setTitle(int)>(2131034112)
+	virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog show()>()
+	$r6 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>()
+	$r10 = staticinvoke <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])>($r9)
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$r11 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getOriginatingAddress()>()
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$z0 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("set admin")
+	virtualinvoke $r6.<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)>($r0, null, $r1, $r4, $r5)
+	$r2 = virtualinvoke $r0.<com.security.service.MainActivity: android.view.MenuInflater getMenuInflater()>()
+	$r4 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>($i2, $i3)
+	$r4 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0)
+	staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("Service", $r4)
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r3, 0)
+	$r4 = virtualinvoke $r10.<android.telephony.SmsMessage: java.lang.String getMessageBody()>()
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()
+	$r6 = staticinvoke <android.telephony.SmsManager: android.telephony.SmsManager getDefault()>()
+	$r5 = virtualinvoke $r4.<java.lang.Class: java.lang.String getCanonicalName()>()
+	virtualinvoke $r0.<com.security.service.MainActivity: void setContentView(int)>(2130903040)
+	$r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>()

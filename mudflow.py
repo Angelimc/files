@@ -1,13 +1,12 @@
-import multiprocessing as mp
-import glob
 import os
+import re
 import shutil
 import uuid
+
 import pandas as pd
 from pandas import DataFrame
 
-from utilities import append_df_to_excel, copyToFile, appendToFile, add_to_error_list
-import re
+from utilities import append_df_to_excel
 
 mudflow_count_apks = 0
 mudflow_file_path = ''
@@ -43,11 +42,10 @@ def calc_num_flows(apk, column_name):
         for line in lines:
             if flow in line:
                 count_flows += 1
-                print('has flow: ' + flow)
     return int(count_flows)
 
 
-def update_row_data(apk, pid, has_flow):
+def update_row_data(apk, has_flow):
     columns = pd.read_excel(mudflow_file_path, sheet_name='Sheet1').columns
     data = []
     for i in range(len(columns)):
@@ -66,7 +64,7 @@ def update_row_data(apk, pid, has_flow):
             p = r'(?<=\/)\d{4}(?=\/)'
             year = re.findall(p, apk)
             if year:
-                data.append(year[0])
+                data.append(int(year[0]))
             else:
                 data.append('')
         elif not has_flow:
@@ -87,5 +85,5 @@ def add_data_to_mudflow_file(apk, pid, has_flow):
     if mudflow_count_apks >= 5:  # TODO: Change to 99 later
         mudflow_count_apks = 0
         create_new_file(pid)
-    update_row_data(apk, pid, has_flow)
+    update_row_data(apk, has_flow)
     mudflow_count_apks += 1
