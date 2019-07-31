@@ -14,7 +14,6 @@ susi_file_path = ''
 
 def create_new_file_path(pid):
     global susi_file_path
-    unique_id = str(uuid.uuid4().hex)
     susi_file_path = 'data/susi/process_' + str(pid) + '/' + str(uuid.uuid4().hex) + '.xlsx'
 
 

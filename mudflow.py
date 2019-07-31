@@ -12,7 +12,6 @@ mudflow_file_path = ''
 
 def create_new_file(pid):
     global mudflow_file_path
-    unique_id = str(uuid.uuid4().hex)
     mudflow_file_path = 'data/mudflow/process_' + str(pid) + '/' + str(uuid.uuid4().hex) + '.xlsx'
     shutil.copy('data/Column_Names.xlsx', mudflow_file_path)
 

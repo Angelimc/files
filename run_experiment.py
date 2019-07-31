@@ -10,10 +10,12 @@ from mudflow import add_data_to_mudflow_file
 import pandas as pd
 from susi import add_data_to_susi_file
 
-apk_files_dir ='/Users/angeli/My_Documents/Mudflow/DataTest/'
-#apk_files_dir = 'data/'
-#apk_files_dir = '/data/michaelcao/DatasetsForTools/'
-#apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
+#   TODO:
+# Testing in zeus: apk_files_dir = 'data/'
+# Zeus: apk_files_dir = '/data/michaelcao/DatasetsForTools/'
+# Thanos: apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
+# Local: apk_files_dir ='/Users/angeli/My_Documents/Mudflow/DataTest/'
+apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
 
 
 def split(l, n):
@@ -145,8 +147,8 @@ def start_experiment(apks_list_path):
 #   Runs flowdroid on all apks and creates the susi and mudflow excel sheets using given number of processes
 #   @param: number of processes to run
 def main():
-    #num_workers = int(sys.argv[1])
-    num_workers = 1
+    num_workers = int(sys.argv[1])
+    #num_workers = 1
     create_apks_chunks(num_workers)
     update_apks_processed(num_workers)
     procs = []
