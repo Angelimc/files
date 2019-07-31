@@ -46,15 +46,15 @@ def create_apks_chunks(num_workers):
 
 #   Creates folders and file for list of processed apks for each worker if they don't exist
 #   @param id: number to identify this for this worker
-def setup_folders(id):
-    mudflow_dir = 'data/mudflow/process_' + id + '/'
+def setup_folders(pid):
+    mudflow_dir = 'data/mudflow/process_' + pid + '/'
     if not os.path.exists(mudflow_dir):
         os.mkdir(mudflow_dir)
-    susi_dir = 'data/susi/process_' + id + '/'
+    susi_dir = 'data/susi/process_' + pid + '/'
     if not os.path.exists(susi_dir):
         os.mkdir(susi_dir)
-    if not os.path.exists('data/progress/apks_processed_' + id + '.csv'):
-        with open('data/progress/apks_processed_' + id + '.csv', 'w') as f1:
+    if not os.path.exists('data/progress/apks_processed_' + pid + '.csv'):
+        with open('data/progress/apks_processed_' + pid + '.csv', 'w') as f1:
             pass
 
 
@@ -77,8 +77,8 @@ def is_processed(pid, apk):
 #   Add apk to to list of processed apks
 #   @param current apk path being processed
 #   @param id: number to identify this for this worker
-def add_to_processed_apks_list(apk, id):
-    with open('data/progress/apks_processed_' + id + '.csv', 'a') as file:
+def add_to_processed_apks_list(apk, pid):
+    with open('data/progress/apks_processed_' + pid + '.csv', 'a') as file:
         timestr = time.strftime("%Y%m%d-%H%M%S")
         writer = csv.writer(file, delimiter=',')
         writer.writerow([apk + '_' + timestr])
@@ -148,7 +148,7 @@ def start_experiment(apks_list_path):
 #   @param: number of processes to run
 def main():
     num_workers = int(sys.argv[1])
-    #num_workers = 1
+    # num_workers = 1
     create_apks_chunks(num_workers)
     update_apks_processed(num_workers)
     procs = []

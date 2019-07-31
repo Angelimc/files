@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a2b43ee6-714e-467d-92ed-6a638fa8302a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/apks_chunk_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/VirusShare_89d2d4a8cf9509236d020a6ce6246274.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/progress/apks_processed_0.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flowdroid.py" beforeDir="false" afterPath="$PROJECT_DIR$/flowdroid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mudflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/mudflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init_source_sink_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/init_source_sink_files.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_experiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/susi.py" beforeDir="false" afterPath="$PROJECT_DIR$/susi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +30,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">

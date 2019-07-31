@@ -78,9 +78,9 @@ def copy_to_file(input_file, output):
             f2.write('\n')
 
 
-def append_to_file(input_file, output):
+def append_to_file(input_file, output_file):
     with open(input_file) as f1:
-        with open(output, 'a+') as f2:
+        with open(output_file, 'a+') as f2:
             for line in f1:
                 f2.write(line)
 

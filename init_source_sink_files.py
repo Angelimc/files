@@ -5,8 +5,8 @@ from susi import susi_categories
 from utilities import copy_to_file, append_to_file
 
 
-def create_source_sink_file(input, output, is_source):
-    with open(input) as f1:
+def create_source_sink_file(input_file, output_file, is_source):
+    with open(input_file) as f1:
         lines = f1.readlines()
         sources = []
         # check if line contains method signature
@@ -19,7 +19,7 @@ def create_source_sink_file(input, output, is_source):
                     sources.append(res[0] + ' -> _SOURCE_')
                 else:
                     sources.append(res[0] + ' -> _SINK_')
-    with open(output, 'w') as f2:
+    with open(output_file, 'w') as f2:
         f2.write('\n'.join(sources))
     stype = 'sinks'
     if is_source:
