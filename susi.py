@@ -1,8 +1,6 @@
 import os
 import uuid
-
 from pandas import DataFrame
-
 from utilities import append_df_to_excel
 
 susi_categories = ['HARDWARE_INFO', 'UNIQUE_IDENTIFIER', 'LOCATION_INFORMATION', 'NETWORK_INFORMATION',
@@ -12,7 +10,7 @@ susi_categories = ['HARDWARE_INFO', 'UNIQUE_IDENTIFIER', 'LOCATION_INFORMATION',
                     'NO_SENSITIVE_SOURCE', 'CONTENT_RESOLVER']
 susi_count_apks = 0
 susi_file_path = ''
-#TODO: add platform jars
+
 
 def create_new_file_path(pid):
     global susi_file_path
@@ -54,7 +52,7 @@ def add_data_to_susi_file(apk, pid):
     # create new excel sheet if count is equal to 0 or max num of apks
     if susi_count_apks == 0:
         create_new_file_path(pid)
-    if susi_count_apks >= 5: #TODO:Change to 99 later
+    if susi_count_apks >= 99:
         susi_count_apks = 0
         create_new_file_path(pid)
     process_apk(apk)

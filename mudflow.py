@@ -2,10 +2,8 @@ import os
 import re
 import shutil
 import uuid
-
 import pandas as pd
 from pandas import DataFrame
-
 from utilities import append_df_to_excel
 
 mudflow_count_apks = 0
@@ -82,7 +80,7 @@ def add_data_to_mudflow_file(apk, pid, has_flow):
     # create new excel sheet if count is equal to 0 or max number of rows
     if mudflow_count_apks == 0:
         create_new_file(pid)
-    if mudflow_count_apks >= 5:  # TODO: Change to 99 later
+    if mudflow_count_apks >= 99:
         mudflow_count_apks = 0
         create_new_file(pid)
     update_row_data(apk, has_flow)

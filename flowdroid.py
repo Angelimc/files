@@ -1,20 +1,17 @@
 #!/usr/bin/python
 
-import subprocess, sys
-import re
 import os
-from utilities import copy_to_file
+import subprocess
+import sys
 
-# TODO: change directory
+#TODO: change back to /data/Junbin/android-platforms
 androidJar = '/Users/angeli/Library/Android/sdk/platforms'
 
-
+#TODO 'timeout', '12h',
 def run_flowdroid(apkPath):
-
-    #TODO: check --TIMEOUT , '--layoutmode', 'none', '--timeout', '43200'
     # run mudflow's version of flowdroid (added layoutmode none and fixed nopath to nopaths to their script)
-    config = ['--logsourcesandsinks', '--pathalgo', 'sourcesonly', '--nopath', '--aliasflowins', '--nostatic',
-              '--aplength', '3','--layoutmode', 'none']
+    config = ['--logsourcesandsinks', '--pathalgo', 'sourcesonly', '--nopaths', '--aliasflowins', '--nostatic',
+              '--aplength', '3', '--layoutmode', 'none']
     cmd = ['java', '-Xmx300g', '-jar', 'flowdroid.jar',  apkPath, androidJar] + list(config)
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     sys.stdout.flush()

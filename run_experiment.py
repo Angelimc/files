@@ -1,8 +1,8 @@
 import csv
 import glob
 import os
-
-from pandas.errors import EmptyDataError
+import sys
+import time
 from utilities import add_to_error_list
 from flowdroid import run_flowdroid
 from multiprocessing import Process
@@ -10,9 +10,10 @@ from mudflow import add_data_to_mudflow_file
 import pandas as pd
 from susi import add_data_to_susi_file
 
-#TODO: change directories
-apk_files_dir = '/Users/angeli/My_Documents/Mudflow/DataTest/'
-apk_list_csv_dir = '/Users/angeli/My_Documents/Mudflow/'
+apk_files_dir ='/Users/angeli/My_Documents/Mudflow/DataTest/'
+#apk_files_dir = 'data/'
+#apk_files_dir = '/data/michaelcao/DatasetsForTools/'
+#apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
 
 
 def split(l, n):
@@ -21,7 +22,7 @@ def split(l, n):
 
 
 def create_csv(general_malware, general_benign, gp_malware, i):
-    with open(apk_list_csv_dir + 'apks_chunk_' + str(i) + '.csv', 'w') as file:
+    with open('data/apks_chunk_' + str(i) + '.csv', 'w') as file:
         writer = csv.writer(file)
         writer.writerow(general_malware)
         writer.writerow(general_benign)
@@ -29,9 +30,9 @@ def create_csv(general_malware, general_benign, gp_malware, i):
 
 
 def create_apks_chunks(num_workers):
-    general_malware = [f for f in glob.glob(apk_files_dir + 'malware/**/*.apk', recursive=True)]
-    general_benign = [f for f in glob.glob(apk_files_dir + 'benign/**/*.apk', recursive=True)]
-    gp_malware = [f for f in glob.glob(apk_files_dir + 'gp/**/*.apk', recursive=True)]
+    general_malware = [f for f in glob.glob(apk_files_dir + 'GeneralMalware/**/*.apk', recursive=True)]
+    general_benign = [f for f in glob.glob(apk_files_dir + 'GeneralBenign/**/*.apk', recursive=True)]
+    gp_malware = [f for f in glob.glob(apk_files_dir + 'GPMalware/**/*.apk', recursive=True)]
 
     general_malware_chunks = split(general_malware, num_workers)
     general_benign_chunks = split(general_benign, num_workers)
@@ -76,8 +77,9 @@ def is_processed(pid, apk):
 #   @param id: number to identify this for this worker
 def add_to_processed_apks_list(apk, id):
     with open('data/progress/apks_processed_' + id + '.csv', 'a') as file:
+        timestr = time.strftime("%Y%m%d-%H%M%S")
         writer = csv.writer(file, delimiter=',')
-        writer.writerow([apk])
+        writer.writerow([apk + '_' + timestr])
     print('Completed processing: ' + apk)
 
 
@@ -89,9 +91,10 @@ def update_apks_processed(num_workers):
             result = pd.concat([pd.read_csv(f) for f in apks_processed_files])
             combined_csv = pd.DataFrame(result).drop_duplicates(keep='last')
             for pid in range(num_workers):
-                combined_csv.to_csv('data/progress/apks_processed_' + str(pid) + '.csv', index=False, encoding='utf-8-sig')
-        except EmptyDataError:
-            df = pd.DataFrame()
+                combined_csv.to_csv('data/progress/apks_processed_' + str(pid) + '.csv', index=False,
+                                    encoding='utf-8-sig')
+        except ValueError:
+            pass
 
 
 #   Return False if flowdroid output contains 'No sources found', 'No sinks found', or 'No results found', True
@@ -142,13 +145,13 @@ def start_experiment(apks_list_path):
 #   Runs flowdroid on all apks and creates the susi and mudflow excel sheets using given number of processes
 #   @param: number of processes to run
 def main():
+    #num_workers = int(sys.argv[1])
     num_workers = 1
-    #num_workers = int(sys.argv[1]) #TODO: remove later
     create_apks_chunks(num_workers)
     update_apks_processed(num_workers)
     procs = []
     for i in range(num_workers):
-        apk_list_csv_path = apk_list_csv_dir + 'apks_chunk_' + str(i) + '.csv'
+        apk_list_csv_path = 'data/apks_chunk_' + str(i) + '.csv'
         p = Process(target=start_experiment, args=[apk_list_csv_path])
         procs.append(p)
         p.start()
@@ -156,5 +159,5 @@ def main():
         p.join()
 
 
-if __name__ =='__main__':
+if __name__ == '__main__':
     main()
