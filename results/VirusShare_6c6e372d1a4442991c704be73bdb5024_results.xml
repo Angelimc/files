@@ -2784,52 +2784,8 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
-      <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity$2: void onClick(android.view.View)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
       <method>&lt;android.app.Activity: void startActivity(android.content.Intent)&gt;</method>
       <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity$2: void onClick(android.view.View)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
-      <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity$2: void onClick(android.view.View)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
-      <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
-      <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity$2: void onClick(android.view.View)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.view.Display: int getHeight()&gt;</method>
-      <callerMethod>&lt;com.camelgames.framework.ui.UIUtility: int getDisplayHeight(float)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
-      <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity$2: void onClick(android.view.View)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
-      <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>
-      <callerMethod>&lt;com.camelgames.explode.activities.ScoreActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
     <sink>
       <method>&lt;android.view.ContextThemeWrapper: android.content.res.Resources getResources()&gt;</method>

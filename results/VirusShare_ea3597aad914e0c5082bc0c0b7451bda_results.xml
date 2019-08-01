@@ -34,17 +34,6 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
-      <callerMethod>&lt;org.nimeishudian.osujlwozd.MyActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.app.Activity: android.app.Application getApplication()&gt;</method>
-      <callerMethod>&lt;org.nimeishudian.osujlwozd.MyActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
       <method>&lt;android.app.Activity: void startActivity(android.content.Intent)&gt;</method>
       <callerMethod>&lt;org.nimeishudian.osujlwozd.MyActivity: void a()&gt;</callerMethod>
     </source>
@@ -84,6 +73,17 @@
     <sink>
       <method>&lt;android.util.Log: int i(java.lang.String,java.lang.String)&gt;</method>
       <callerMethod>&lt;org.nimeishudian.osujlwozd.MyActivity: void onResume()&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.app.Activity: void onCreate(android.os.Bundle)&gt;</method>
+      <callerMethod>&lt;org.nimeishudian.osujlwozd.MyActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.app.Activity: android.app.Application getApplication()&gt;</method>
+      <callerMethod>&lt;org.nimeishudian.osujlwozd.MyActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>

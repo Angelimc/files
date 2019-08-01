@@ -46,9 +46,7 @@ def update_row_data(apk, has_flow):
     columns = pd.read_excel(mudflow_file_path, sheet_name='Sheet1').columns
     data = []
     for i in range(len(columns)):
-        if i == 0:
-            continue
-        elif columns[i].lower().strip() == 'name':
+        if columns[i].lower().strip() == 'name':
             data.append(os.path.splitext(os.path.basename(apk))[0])
         elif columns[i].lower().strip() == 'malicious':
             if 'GeneralBenign' in apk:

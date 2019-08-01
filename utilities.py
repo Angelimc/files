@@ -1,7 +1,5 @@
 import os
-
 import pandas as pd
-from pandas import DataFrame
 
 
 def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
@@ -86,6 +84,6 @@ def append_to_file(input_file, output_file):
 
 
 def add_to_error_list(apk, pid, step, message):
-    df = DataFrame([os.path.splitext(os.path.basename(apk))[0], step, message]).T
+    df = pd.DataFrame([os.path.splitext(os.path.basename(apk))[0], step, message]).T
     append_df_to_excel('data/progress/errors_' + pid + '.xlsx', df, header=None)
     print('Error for ' + apk + ' in step ' + step + ': ' + message)

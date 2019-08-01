@@ -5,18 +5,19 @@ import subprocess
 import sys
 
 #   TODO:
-# Thanos: /data/Angeli/android-platforms
-# Zeus: /nfs/zeus/Angeli/android-platforms
+# Zeus: /data/Angeli/android-platforms
+# Thanos: /nfs/zeus/Angeli/android-platforms
 # Local: '/Users/angeli/Library/Android/sdk/platforms'
 
-androidJar = '/nfs/zeus/Angeli/android-platforms'
+androidJar = '/Users/angeli/Library/Android/sdk/platforms'
 
-
+# TODO:
+# Local: remove 'timeout', '12h',
 def run_flowdroid(apk_path):
     # run mudflow's version of flowdroid (added layoutmode none and fixed nopath to nopaths to their script)
     config = ['--logsourcesandsinks', '--pathalgo', 'sourcesonly', '--nopaths', '--aliasflowins', '--nostatic',
               '--aplength', '3', '--layoutmode', 'none']
-    cmd = ['timeout', '12h', 'java', '-Xmx300g', '-jar', 'flowdroid.jar', apk_path, androidJar] + list(config)
+    cmd = ['java', '-Xmx300g', '-jar', 'flowdroid.jar', apk_path, androidJar] + list(config)
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     sys.stdout.flush()
 

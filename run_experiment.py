@@ -15,7 +15,7 @@ from susi import add_data_to_susi_file
 # Zeus: apk_files_dir = '/data/michaelcao/DatasetsForTools/'
 # Thanos: apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
 # Local: apk_files_dir ='/Users/angeli/My_Documents/Mudflow/DataTest/'
-apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
+apk_files_dir = '/Users/angeli/My_Documents/Mudflow/DataTest/'
 
 
 def split(l, n):
@@ -35,6 +35,9 @@ def create_apks_chunks(num_workers):
     general_malware = [f for f in glob.glob(apk_files_dir + 'GeneralMalware/**/*.apk', recursive=True)]
     general_benign = [f for f in glob.glob(apk_files_dir + 'GeneralBenign/**/*.apk', recursive=True)]
     gp_malware = [f for f in glob.glob(apk_files_dir + 'GPMalware/**/*.apk', recursive=True)]
+    #general_benign = []
+    #gp_malware = []
+
 
     general_malware_chunks = split(general_malware, num_workers)
     general_benign_chunks = split(general_benign, num_workers)
@@ -77,11 +80,10 @@ def is_processed(pid, apk):
 #   Add apk to to list of processed apks
 #   @param current apk path being processed
 #   @param id: number to identify this for this worker
-def add_to_processed_apks_list(apk, pid):
+def add_to_processed_apks_list(apk, pid, start_time, end_time):
     with open('data/progress/apks_processed_' + pid + '.csv', 'a') as file:
-        timestr = time.strftime("%Y%m%d-%H%M%S")
         writer = csv.writer(file, delimiter=',')
-        writer.writerow([apk + '_' + timestr])
+        writer.writerow([apk + '_' + start_time + '_' + end_time])
     print('Completed processing: ' + apk)
 
 
@@ -105,8 +107,14 @@ def has_flow(apk):
     output_path = 'data/log/' + os.path.splitext(os.path.basename(apk))[0] + '.txt'
     with open(output_path, 'r') as file:
         contents = file.read()
-        if 'No sources found' in contents or 'No sinks found' in contents or 'No results found' in contents:
-            print('No sources or sinks found for ' + apk)
+        if 'No sources found' in contents:
+            print('No sources found for ' + apk)
+            return False
+        if 'No sinks found' in contents:
+            print('No sinks found for ' + apk)
+            return False
+        if 'No results found' in contents:
+            print('No results found for ' + apk)
             return False
     return True
 
@@ -132,23 +140,24 @@ def start_experiment(apks_list_path):
         for apks in apks_list:
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
+                    start_time = time.strftime("%Y%m%d-%H%M%S")
                     run_flowdroid(apks[i])
+                    end_time = time.strftime("%Y%m%d-%H%M%S")
                     if contains_error(apks[i], pid):
-                        add_to_processed_apks_list(apks[i], pid)
+                        add_to_processed_apks_list(apks[i], pid, start_time, end_time)
                         continue
                     contain_flow = has_flow(apks[i])
                     if contain_flow:
                         pass
                         add_data_to_susi_file(apks[i], pid)
                     add_data_to_mudflow_file(apks[i], pid, contain_flow)
-                    add_to_processed_apks_list(apks[i], pid)
+                    add_to_processed_apks_list(apks[i], pid, start_time, end_time)
 
 
 #   Runs flowdroid on all apks and creates the susi and mudflow excel sheets using given number of processes
 #   @param: number of processes to run
 def main():
     num_workers = int(sys.argv[1])
-    # num_workers = 1
     create_apks_chunks(num_workers)
     update_apks_processed(num_workers)
     procs = []

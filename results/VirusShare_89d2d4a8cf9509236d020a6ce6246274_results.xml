@@ -122,17 +122,6 @@
   </st.cs.uni.saarland.de.FlowdroidResults>
   <st.cs.uni.saarland.de.FlowdroidResults>
     <source>
-      <method>&lt;android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])&gt;</method>
-      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
-    </source>
-    <sink>
-      <method>&lt;android.telephony.SmsMessage: java.lang.String getMessageBody()&gt;</method>
-      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
-    </sink>
-    <path/>
-  </st.cs.uni.saarland.de.FlowdroidResults>
-  <st.cs.uni.saarland.de.FlowdroidResults>
-    <source>
       <method>&lt;android.app.Activity: void setContentView(int)&gt;</method>
       <callerMethod>&lt;com.security.service.MainActivity: void onCreate(android.os.Bundle)&gt;</callerMethod>
     </source>
@@ -150,6 +139,17 @@
     <sink>
       <method>&lt;android.app.Activity: android.view.MenuInflater getMenuInflater()&gt;</method>
       <callerMethod>&lt;com.security.service.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)&gt;</callerMethod>
+    </sink>
+    <path/>
+  </st.cs.uni.saarland.de.FlowdroidResults>
+  <st.cs.uni.saarland.de.FlowdroidResults>
+    <source>
+      <method>&lt;android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[])&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
+    </source>
+    <sink>
+      <method>&lt;android.telephony.SmsMessage: java.lang.String getMessageBody()&gt;</method>
+      <callerMethod>&lt;com.security.service.receiver.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)&gt;</callerMethod>
     </sink>
     <path/>
   </st.cs.uni.saarland.de.FlowdroidResults>
