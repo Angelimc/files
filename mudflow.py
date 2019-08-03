@@ -62,6 +62,15 @@ def update_row_data(apk, has_flow):
                 data.append(int(year[0]))
             else:
                 data.append('')
+        elif columns[i].lower().strip() == 'category':
+            if 'GeneralBenign' in apk:
+                data.append('general benign')
+            elif 'GeneralMalware' in apk:
+                data.append('general malware')
+            elif 'GPMalware' in apk:
+                data.append('gp malware')
+            else:
+                data.append('')
         elif not has_flow:
             data.append(0)
         else:

@@ -12,11 +12,10 @@ from susi import add_data_to_susi_file
 from datetime import datetime
 
 #   TODO:
-# Testing in zeus: apk_files_dir = 'data/'
 # Zeus: apk_files_dir = '/data/michaelcao/DatasetsForTools/'
 # Thanos: apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
 # Local: apk_files_dir ='/Users/angeli/My_Documents/Mudflow/DataTest/'
-apk_files_dir = '/Users/angeli/My_Documents/Mudflow/DataTest/'
+apk_files_dir = '/nfs/zeus/michaelcao/DatasetsForTools/'
 
 
 def split(l, n):
@@ -24,25 +23,36 @@ def split(l, n):
     return list((l[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(n)))
 
 
-def create_csv(general_malware, general_benign, gp_malware, i):
+def create_csv(apk_lists, i):
     with open('data/apks_chunk_' + str(i) + '.csv', 'w') as file:
         writer = csv.writer(file)
-        writer.writerow(general_malware)
-        writer.writerow(general_benign)
-        writer.writerow(gp_malware)
+        for apk_list in apk_lists:
+            writer.writerow(apk_list)
+
+
+def get_lines_from_file(file_name):
+    with open(file_name, 'r') as f:
+        return [line.rstrip('\n') for line in f]
 
 
 def create_apks_chunks(num_workers):
-    general_malware = [f for f in glob.glob(apk_files_dir + 'GeneralMalware/**/*.apk', recursive=True)]
-    general_benign = [f for f in glob.glob(apk_files_dir + 'GeneralBenign/**/*.apk', recursive=True)]
-    gp_malware = [f for f in glob.glob(apk_files_dir + 'GPMalware/**/*.apk', recursive=True)]
+    general_malware_2019_test = get_lines_from_file(apk_files_dir + 'MudflowExperiments/general_malware_2019_test.txt')
+    general_malware_2018_train = get_lines_from_file(apk_files_dir + 'MudflowExperiments/general_malware_2018_train.txt')
+    general_malware_2018_test = get_lines_from_file(apk_files_dir + 'MudflowExperiments/general_malware_2018_test.txt')
+    gp_malware_2018 = [f for f in glob.glob(apk_files_dir + 'GPMalware/2018/*.apk', recursive=True)]
+    gp_malware_2019 = [f for f in glob.glob(apk_files_dir + 'GPMalware/2019/*.apk', recursive=True)]
 
-    general_malware_chunks = split(general_malware, num_workers)
-    general_benign_chunks = split(general_benign, num_workers)
-    gp_malware_chunks = split(gp_malware, num_workers)
+    general_malware_2019_test_chunks = split(general_malware_2019_test, num_workers)
+    general_malware_2018_train_chunks = split(general_malware_2018_train, num_workers)
+    general_malware_2018_test_chunks = split(general_malware_2018_test, num_workers)
+    gp_malware_2018_chunks = split(gp_malware_2018, num_workers)
+    gp_malware_2019_chunks = split(gp_malware_2019, num_workers)
 
     for i in range(num_workers):
-        create_csv(general_malware_chunks[i], general_benign_chunks[i], gp_malware_chunks[i], i)
+        print(i)
+        apk_lists = [general_malware_2019_test_chunks[i], general_malware_2018_train_chunks[i],
+                     general_malware_2018_test_chunks[i], gp_malware_2018_chunks, gp_malware_2019_chunks]
+        create_csv(apk_lists,  i)
 
 
 #   Creates folders and file for list of processed apks for each worker if they don't exist
@@ -148,7 +158,7 @@ def start_experiment(apks_list_path):
         for apks in apks_list:
             for i in range(len(apks)):
                 if not is_processed(pid, apks[i]):
-                    print('Worker ' + str(pid) + ' processing: ' + apks[i])
+                    print('Processing: ' + apks[i])
                     start_time = datetime.now()
                     run_flowdroid(apks[i])
                     end_time = datetime.now()
@@ -166,8 +176,7 @@ def start_experiment(apks_list_path):
 #   Runs flowdroid on all apks and creates the susi and mudflow excel sheets using given number of processes
 #   @param: number of processes to run
 def main():
-    #num_workers = int(sys.argv[1])
-    num_workers = 1
+    num_workers = int(sys.argv[1])
     update_apks_processed(num_workers)
     create_apks_chunks(num_workers)
     procs = []

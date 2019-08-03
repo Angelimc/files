@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a2b43ee6-714e-467d-92ed-6a638fa8302a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Column_Names.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Column_Names.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mudflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/mudflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VirusShare_6c6e372d1a4442991c704be73bdb5024_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_6c6e372d1a4442991c704be73bdb5024_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_89d2d4a8cf9509236d020a6ce6246274_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VirusShare_9ffc50dd20f69b6114a468d6e155432c_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/VirusShare_9ffc50dd20f69b6114a468d6e155432c_results.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_experiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_experiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/susi.py" beforeDir="false" afterPath="$PROJECT_DIR$/susi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
