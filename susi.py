@@ -14,7 +14,7 @@ susi_file_path = ''
 
 def create_new_file_path(pid):
     global susi_file_path
-    susi_file_path = 'data/susi/process_' + str(pid) + '/' + str(uuid.uuid4().hex) + '.xlsx'
+    susi_file_path = 'data/susi/process_' + str(pid) + '/new_' + str(uuid.uuid4().hex) + '.xlsx'
 
 
 def parse_source(line):
